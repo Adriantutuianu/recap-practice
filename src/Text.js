@@ -1,14 +1,11 @@
-// You can easily decrement or decrease a variable by one with the -- operator.
+// We can store decimal numbers in variables too. Decimal numbers are sometimes referred to as floating point numbers or floats.
 
-// i--;
-// is the equivalent of
+// Note: when you compute numbers, they are computed with finite precision. Operations using floating points may lead to different results than the desired outcome. If you are getting one of these results, open a topic on the freeCodeCamp forum.
 
-// i = i - 1;
-// Note: The entire line becomes i--;, eliminating the need for the equal sign.
+// Create a variable myDecimal and give it a decimal value with a fractional part (e.g. 5.7).
 
-// Change the code to use the -- operator on myVar.
-
-let myVar = 11;
+const ourDecimal = 5.7;
 
 // Only change code below this line
-myVar--;
+
+const myDecimal = 5.7;
