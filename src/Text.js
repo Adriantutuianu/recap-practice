@@ -1,13 +1,26 @@
-// When JavaScript variables are declared, they have an initial value of undefined. If you do a mathematical operation on an undefined variable your result will be NaN which means "Not a Number". If you concatenate a string with an undefined variable, you will get a string of undefined.
+// In JavaScript all variables and function names are case sensitive. This means that capitalization matters.
 
-// Initialize the three variables a, b, and c with 5, 10, and "I am a" respectively so that they will not be undefined.
+// MYVAR is not the same as MyVar nor myvar. It is possible to have multiple distinct variables with the same name but different casing. It is strongly recommended that for the sake of clarity, you do not use this language feature.
 
-// Only change code below this line
-var a = 5;
-var b = 10;
-var c = "I am a";
-// Only change code above this line
+// Best Practice
 
-a = a + 1;
-b = b + 5;
-c = c + " String!";
+// Write variable names in JavaScript in camelCase. In camelCase, multi-word variable names have the first word in lowercase and the first letter of each subsequent word is capitalized.
+
+// Examples:
+
+// var someVariable;
+// var anotherVariableName;
+// var thisVariableNameIsSoLong;
+// Modify the existing declarations and assignments so their names use camelCase.
+
+// Do not create any new variables.
+
+// Variable declarations
+var studlyCapVar;
+var properCamelCase;
+var titleCaseOver;
+
+// Variable assignments
+studlyCapVar = 10;
+properCamelCase = "A String";
+titleCaseOver = 9000;
