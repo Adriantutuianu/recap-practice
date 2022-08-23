@@ -1,12 +1,14 @@
-// We can also divide one number by another.
+// You can easily increment or add one to a variable with the ++ operator.
 
-// JavaScript uses the / symbol for division.
+// i++;
+// is the equivalent of
 
-// Example
+// i = i + 1;
+// Note: The entire line becomes i++;, eliminating the need for the equal sign.
 
-// const myVar = 16 / 2;
-// myVar now has the value 8.
+// Change the code to use the ++ operator on myVar.
 
-// // Change the 0 so that the quotient is equal to 2.
+let myVar = 87;
 
-const quotient = 66 / 33;
+// Only change code below this line
+myVar++;
