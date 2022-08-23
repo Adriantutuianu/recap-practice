@@ -1,8 +1,12 @@
-// It is common to initialize a variable to an initial value in the same line as it is declared.
+// Previously you used the following code to declare a variable:
 
-// var myVar = 0;
-// Creates a new variable called myVar and assigns it an initial value of 0.
+// var myName;
+// But you can also declare a string variable like this:
 
-// Define a variable a with var and initialize it to a value of 9.
+// var myName = "your name";
+// "your name" is called a string literal. A string literal, or string, is a series of zero or more characters enclosed in single or double quotes.
 
-var a = 9;
+// Create two new string variables: myFirstName and myLastName and assign them the values of your first and last name, respectively.
+
+var myFirstName = "Adrian";
+var myLastName = "Tutuianu";
