@@ -1,12 +1,12 @@
-// We can also subtract one number from another.
+// We can also multiply one number by another.
 
-// JavaScript uses the - symbol for subtraction.
+// JavaScript uses the * symbol for multiplication of two numbers.
 
 // Example
 
-// const myVar = 12 - 6;
-// myVar would have the value 6.
+// const myVar = 13 * 13;
+// myVar would have the value 169.
 
-// Change the 0 so the difference is 12.
+// Change the 0 so that product will equal 80.
 
-const difference = 45 - 33;
+const product = 8 * 10;
