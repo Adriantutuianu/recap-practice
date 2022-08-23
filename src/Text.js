@@ -1,26 +1,23 @@
-// In JavaScript all variables and function names are case sensitive. This means that capitalization matters.
+// One of the biggest problems with declaring variables with the var keyword is that you can easily overwrite variable declarations:
 
-// MYVAR is not the same as MyVar nor myvar. It is possible to have multiple distinct variables with the same name but different casing. It is strongly recommended that for the sake of clarity, you do not use this language feature.
+// var camper = "James";
+// var camper = "David";
+// console.log(camper);
+// In the code above, the camper variable is originally declared as James, and is then overridden to be David. The console then displays the string David.
 
-// Best Practice
+// In a small application, you might not run into this type of problem. But as your codebase becomes larger, you might accidentally overwrite a variable that you did not intend to. Because this behavior does not throw an error, searching for and fixing bugs becomes more difficult.
 
-// Write variable names in JavaScript in camelCase. In camelCase, multi-word variable names have the first word in lowercase and the first letter of each subsequent word is capitalized.
+// A keyword called let was introduced in ES6, a major update to JavaScript, to solve this potential issue with the var keyword. You'll learn about other ES6 features in later challenges.
 
-// Examples:
+// If you replace var with let in the code above, it results in an error:
 
-// var someVariable;
-// var anotherVariableName;
-// var thisVariableNameIsSoLong;
-// Modify the existing declarations and assignments so their names use camelCase.
+// let camper = "James";
+// let camper = "David";
+// The error can be seen in your browser console.
 
-// Do not create any new variables.
+// So unlike var, when you use let, a variable with the same name can only be declared once.
 
-// Variable declarations
-var studlyCapVar;
-var properCamelCase;
-var titleCaseOver;
+// Update the code so it only uses the let keyword.
 
-// Variable assignments
-studlyCapVar = 10;
-properCamelCase = "A String";
-titleCaseOver = 9000;
+let catName = "Oliver";
+let catSound = "Meow!";
