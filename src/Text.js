@@ -1,23 +1,18 @@
-// One of the biggest problems with declaring variables with the var keyword is that you can easily overwrite variable declarations:
+// The keyword let is not the only new way to declare variables. In ES6, you can also declare variables using the const keyword.
 
-// var camper = "James";
-// var camper = "David";
-// console.log(camper);
-// In the code above, the camper variable is originally declared as James, and is then overridden to be David. The console then displays the string David.
+// const has all the awesome features that let has, with the added bonus that variables declared using const are read-only. They are a constant value, which means that once a variable is assigned with const, it cannot be reassigned:
 
-// In a small application, you might not run into this type of problem. But as your codebase becomes larger, you might accidentally overwrite a variable that you did not intend to. Because this behavior does not throw an error, searching for and fixing bugs becomes more difficult.
+// const FAV_PET = "Cats";
+// FAV_PET = "Dogs";
+// The console will display an error due to reassigning the value of FAV_PET.
 
-// A keyword called let was introduced in ES6, a major update to JavaScript, to solve this potential issue with the var keyword. You'll learn about other ES6 features in later challenges.
+// You should always name variables you don't want to reassign using the const keyword. This helps when you accidentally attempt to reassign a variable that is meant to stay constant.
 
-// If you replace var with let in the code above, it results in an error:
+// Note: It is common for developers to use uppercase variable identifiers for immutable values and lowercase or camelCase for mutable values (objects and arrays). You will learn more about objects, arrays, and immutable and mutable values in later challenges. Also in later challenges, you will see examples of uppercase, lowercase, or camelCase variable identifiers.
 
-// let camper = "James";
-// let camper = "David";
-// The error can be seen in your browser console.
+// Change the code so that all variables are declared using let or const. Use let when you want the variable to change, and const when you want the variable to remain constant. Also, rename variables declared with const to conform to common practices. Do not change the strings assigned to the variables.
 
-// So unlike var, when you use let, a variable with the same name can only be declared once.
-
-// Update the code so it only uses the let keyword.
-
-let catName = "Oliver";
-let catSound = "Meow!";
+const FCC = "freeCodeCamp"; // Change this line
+let fact = "is cool!"; // Change this line
+fact = "is awesome!";
+console.log(FCC, fact); // Change this line
