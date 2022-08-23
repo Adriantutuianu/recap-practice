@@ -1,19 +1,22 @@
-// The remainder operator % gives the remainder of the division of two numbers.
+// In programming, it is common to use assignments to modify the contents of a variable. Remember that everything to the right of the equals sign is evaluated first, so we can say:
 
-// Example
+// myVar = myVar + 5;
+// to add 5 to myVar. Since this is such a common pattern, there are operators which do both a mathematical operation and assignment in one step.
 
-// 5 % 2 = 1 because
-// Math.floor(5 / 2) = 2 (Quotient)
-// 2 * 2 = 4
-// 5 - 4 = 1 (Remainder)
-// Usage
-// In mathematics, a number can be checked to be even or odd by checking the remainder of the division of the number by 2.
+// One such operator is the += operator.
 
-// 17 % 2 = 1 (17 is Odd)
-// 48 % 2 = 0 (48 is Even)
-// Note: The remainder operator is sometimes incorrectly referred to as the modulus operator. It is very similar to modulus, but does not work properly with negative numbers.
+// let myVar = 1;
+// myVar += 5;
+// console.log(myVar);
+// 6 would be displayed in the console.
 
-// Set remainder equal to the remainder of 11 divided by 3 using the remainder (%) operator.
+// Convert the assignments for a, b, and c to use the += operator.
 
-let remainder = 2;
-remainder = 11 % 3;
+let a = 3;
+let b = 17;
+let c = 12;
+
+// Only change code below this line
+a += 12;
+b += 9;
+c += 7;
