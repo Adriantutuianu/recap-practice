@@ -1,12 +1,12 @@
-// We can also multiply one number by another.
+// We can also divide one number by another.
 
-// JavaScript uses the * symbol for multiplication of two numbers.
+// JavaScript uses the / symbol for division.
 
 // Example
 
-// const myVar = 13 * 13;
-// myVar would have the value 169.
+// const myVar = 16 / 2;
+// myVar now has the value 8.
 
-// Change the 0 so that product will equal 80.
+// // Change the 0 so that the quotient is equal to 2.
 
-const product = 8 * 10;
+const quotient = 66 / 33;
