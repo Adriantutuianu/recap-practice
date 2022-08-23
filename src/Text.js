@@ -1,11 +1,7 @@
-// We can store decimal numbers in variables too. Decimal numbers are sometimes referred to as floating point numbers or floats.
+// In JavaScript, you can also perform calculations with decimal numbers, just like whole numbers.
 
-// Note: when you compute numbers, they are computed with finite precision. Operations using floating points may lead to different results than the desired outcome. If you are getting one of these results, open a topic on the freeCodeCamp forum.
+// Let's multiply two decimals together to get their product.
 
-// Create a variable myDecimal and give it a decimal value with a fractional part (e.g. 5.7).
+// Change the 0.0 so that product will equal 5.0.
 
-const ourDecimal = 5.7;
-
-// Only change code below this line
-
-const myDecimal = 5.7;
+const product = 2.0 * 2.5;
