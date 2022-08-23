@@ -1,16 +1,13 @@
-// The /= operator divides a variable by another number.
+// When you are defining a string you must start and end with a single or double quote. What happens when you need a literal quote: " or ' inside of your string?
 
-// myVar = myVar / 5;
-// Will divide myVar by 5. This can be rewritten as:
+// In JavaScript, you can escape a quote from considering it as an end of string quote by placing a backslash (\) in front of the quote.
 
-// myVar /= 5;
-// Convert the assignments for a, b, and c to use the /= operator.
+// const sampleStr = "Alan said, \"Peter is learning JavaScript\".";
+// This signals to JavaScript that the following quote is not the end of the string, but should instead appear inside the string. So if you were to print this to the console, you would get:
 
-let a = 48;
-let b = 108;
-let c = 33;
+// Alan said, "Peter is learning JavaScript".
+// Use backslashes to assign a string to the myStr variable so that if you were to print it to the console, you would see:
 
-// Only change code below this line
-a /= 12;
-b /= 4;
-c /= 11;
+// I am a "double quoted" string inside "double quotes".
+
+const myStr = 'I am a "double quoted" string inside "double quotes".'; // Change this line
