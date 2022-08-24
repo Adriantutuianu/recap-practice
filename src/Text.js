@@ -1,18 +1,19 @@
-// In JavaScript, String values are immutable, which means that they cannot be altered once created.
+// You can also use bracket notation to get the character at other positions within a string.
 
-// For example, the following code:
+// Remember that computers start counting at 0, so the first character is actually the zeroth character.
 
-// let myStr = "Bob";
-// myStr[0] = "J";
-// cannot change the value of myStr to Job, because the contents of myStr cannot be altered. Note that this does not mean that myStr cannot be changed, just that the individual characters of a string literal cannot be changed. The only way to change myStr would be to assign it with a new string, like this:
+// Example:
 
-// let myStr = "Bob";
-// myStr = "Job";
-// Correct the assignment to myStr so it contains the string value of Hello World using the approach shown in the example above.
+// const firstName = "Ada";
+// const secondLetterOfFirstName = firstName[1];
+// secondLetterOfFirstName would have a value of the string d.
+
+// Let's try to set thirdLetterOfLastName to equal the third letter of the lastName variable using bracket notation.
+
+// Hint: Try looking at the example above if you get stuck.
 
 // Setup
-let myStr = "Jello World";
+const lastName = "Lovelace";
 
 // Only change code below this line
-myStr = "Hello World"; // Change this line
-// Only change code above this line
+const thirdLetterOfLastName = lastName[2]; // Change this line
