@@ -1,15 +1,15 @@
-// Just as we can build a string over multiple lines out of string literals, we can also append variables to a string using the plus equals (+=) operator.
+// You can find the length of a String value by writing .length after the string variable or string literal.
 
-// Example:
+// console.log("Alan Peter".length);
+// The value 10 would be displayed in the console. Note that the space character between "Alan" and "Peter" is also counted.
 
-// const anAdjective = "awesome!";
-// let ourStr = "freeCodeCamp is ";
-// ourStr += anAdjective;
-// ourStr would have the value freeCodeCamp is awesome!.
+// For example, if we created a variable const firstName = "Ada", we could find out how long the string Ada is by using the firstName.length property.
 
-// Set someAdjective to a string of at least 3 characters and append it to myStr using the += operator.
+// Use the .length property to set lastNameLength to the number of characters in lastName.
 
-// Change code below this line
-const someAdjective = "easy.";
-let myStr = "Learning to code is ";
-myStr += someAdjective;
+// Setup
+let lastNameLength = 0;
+const lastName = "Lovelace";
+
+// Only change code below this line
+lastNameLength = lastName.length;
