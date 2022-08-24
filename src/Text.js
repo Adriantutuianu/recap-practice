@@ -1,9 +1,12 @@
-// With JavaScript array variables, we can store several pieces of data in one place.
+// You can also nest arrays within other arrays, like below:
 
-// You start an array declaration with an opening square bracket, end it with a closing square bracket, and put a comma between each entry, like this:
+// const teams = [["Bulls", 23], ["White Sox", 45]];
+// This is also called a multi-dimensional array.
 
-// const sandwich = ["peanut butter", "jelly", "bread"];
-// Modify the new array myArray so that it contains both a string and a number (in that order).
+// Create a nested array called myArray.
 
 // Only change code below this line
-const myArray = ["peanuts", 3];
+const myArray = [
+  ["Adi", 4],
+  ["Bye", 1],
+];
