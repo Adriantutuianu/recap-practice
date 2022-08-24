@@ -1,15 +1,14 @@
-// In JavaScript, when the + operator is used with a String value, it is called the concatenation operator. You can build a new string out of other strings by concatenating them together.
+// We can also use the += operator to concatenate a string onto the end of an existing string variable. This can be very helpful to break a long string over several lines.
 
-// Example
-
-// 'My name is Alan,' + ' I concatenate.'
 // Note: Watch out for spaces. Concatenation does not add spaces between concatenated strings, so you'll need to add them yourself.
 
 // Example:
 
-// const ourStr = "I come first. " + "I come second.";
-// The string I come first. I come second. would be displayed in the console.
+// let ourStr = "I come first. ";
+// ourStr += "I come second.";
+// ourStr now has a value of the string I come first. I come second..
 
-// Build myStr from the strings This is the start. and This is the end. using the + operator. Be sure to include a space between the two strings.
+// Build myStr over several lines by concatenating these two strings: This is the first sentence. and This is the second sentence. using the += operator. Use the += operator similar to how it is shown in the example and be sure to include a space between the two strings. Start by assigning the first string to myStr, then add on the second string.
 
-const myStr = "This is the start. " + "This is the end."; // Change this line
+var myStr = "This is the first sentence.";
+myStr += " This is the second sentence.";
