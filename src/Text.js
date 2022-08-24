@@ -1,13 +1,15 @@
-// Sometimes you will need to build a string. By using the concatenation operator (+), you can insert one or more variables into a string you're building.
+// Just as we can build a string over multiple lines out of string literals, we can also append variables to a string using the plus equals (+=) operator.
 
 // Example:
 
-// const ourName = "freeCodeCamp";
-// const ourStr = "Hello, our name is " + ourName + ", how are you?";
-// ourStr would have a value of the string Hello, our name is freeCodeCamp, how are you?.
+// const anAdjective = "awesome!";
+// let ourStr = "freeCodeCamp is ";
+// ourStr += anAdjective;
+// ourStr would have the value freeCodeCamp is awesome!.
 
-// Set myName to a string equal to your name and build myStr with myName between the strings My name is and and I am well!
+// Set someAdjective to a string of at least 3 characters and append it to myStr using the += operator.
 
-// Only change code below this line
-const myName = "Adrian";
-const myStr = "My name is " + myName + "and I am well!";
+// Change code below this line
+const someAdjective = "easy.";
+let myStr = "Learning to code is ";
+myStr += someAdjective;
