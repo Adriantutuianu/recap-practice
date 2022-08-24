@@ -1,27 +1,15 @@
-// Quotes are not the only characters that can be escaped inside a string. There are two reasons to use escaping characters:
+// In JavaScript, when the + operator is used with a String value, it is called the concatenation operator. You can build a new string out of other strings by concatenating them together.
 
-// To allow you to use characters you may not otherwise be able to type out, such as a carriage return.
-// To allow you to represent multiple quotes in a string without JavaScript misinterpreting what you mean.
-// We learned this in the previous challenge.
+// Example
 
-// Code	Output
-// \'	single quote
-// \"	double quote
-// \\	backslash
-// \n	newline
-// \r	carriage return
-// \t	tab
-// \b	word boundary
-// \f	form feed
-// Note that the backslash itself must be escaped in order to display as a backslash.
+// 'My name is Alan,' + ' I concatenate.'
+// Note: Watch out for spaces. Concatenation does not add spaces between concatenated strings, so you'll need to add them yourself.
 
-// Assign the following three lines of text into the single variable myStr using escape sequences.
+// Example:
 
-// FirstLine
-//     \SecondLine
-// ThirdLine
-// You will need to use escape sequences to insert special characters correctly. You will also need to follow the spacing as it looks above, with no spaces between escape sequences or words.
+// const ourStr = "I come first. " + "I come second.";
+// The string I come first. I come second. would be displayed in the console.
 
-// Note: The indentation for SecondLine is achieved with the tab escape character, not spaces.
+// Build myStr from the strings This is the start. and This is the end. using the + operator. Be sure to include a space between the two strings.
 
-const myStr = "FirstLine\n\t\\SecondLine\nThirdLine"; // Change this line
+const myStr = "This is the start. " + "This is the end."; // Change this line
