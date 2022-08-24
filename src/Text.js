@@ -1,17 +1,28 @@
-// Unlike strings, the entries of arrays are mutable and can be changed freely, even if the array was declared with const.
+// One way to think of a multi-dimensional array, is as an array of arrays. When you use brackets to access your array, the first set of brackets refers to the entries in the outer-most (the first level) array, and each additional pair of brackets refers to the next level of entries inside.
 
 // Example
 
-// const ourArray = [50, 40, 30];
-// ourArray[0] = 15;
-// ourArray now has the value [15, 40, 30].
+// const arr = [
+//   [1, 2, 3],
+//   [4, 5, 6],
+//   [7, 8, 9],
+//   [[10, 11, 12], 13, 14]
+// ];
 
-// Note: There shouldn't be any spaces between the array name and the square brackets, like array [0]. Although JavaScript is able to process this correctly, this may confuse other programmers reading your code.
+// const subarray = arr[3];
+// const nestedSubarray = arr[3][0];
+// const element = arr[3][0][1];
+// In this example, subarray has the value [[10, 11, 12], 13, 14], nestedSubarray has the value [10, 11, 12], and element has the value 11 .
 
-// Modify the data stored at index 0 of myArray to a value of 45.
+// Note: There shouldn't be any spaces between the array name and the square brackets, like array [0][0] and even this array [0] [0] is not allowed. Although JavaScript is able to process this correctly, this may confuse other programmers reading your code.
 
-// Setup
-const myArray = [18, 64, 99];
+// Using bracket notation select an element from myArray such that myData is equal to 8.
 
-// Only change code below this line
-myArray[0] = 45;
+const myArray = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+  [[10, 11, 12], 13, 14],
+];
+
+const myData = myArray[2][1];
