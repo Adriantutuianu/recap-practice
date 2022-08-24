@@ -1,28 +1,23 @@
-// One way to think of a multi-dimensional array, is as an array of arrays. When you use brackets to access your array, the first set of brackets refers to the entries in the outer-most (the first level) array, and each additional pair of brackets refers to the next level of entries inside.
+// An easy way to append data to the end of an array is via the push() function.
 
-// Example
+// .push() takes one or more parameters and "pushes" them onto the end of the array.
 
-// const arr = [
-//   [1, 2, 3],
-//   [4, 5, 6],
-//   [7, 8, 9],
-//   [[10, 11, 12], 13, 14]
-// ];
+// Examples:
 
-// const subarray = arr[3];
-// const nestedSubarray = arr[3][0];
-// const element = arr[3][0][1];
-// In this example, subarray has the value [[10, 11, 12], 13, 14], nestedSubarray has the value [10, 11, 12], and element has the value 11 .
+// const arr1 = [1, 2, 3];
+// arr1.push(4);
 
-// Note: There shouldn't be any spaces between the array name and the square brackets, like array [0][0] and even this array [0] [0] is not allowed. Although JavaScript is able to process this correctly, this may confuse other programmers reading your code.
+// const arr2 = ["Stimpson", "J", "cat"];
+// arr2.push(["happy", "joy"]);
+// arr1 now has the value [1, 2, 3, 4] and arr2 has the value ["Stimpson", "J", "cat", ["happy", "joy"]].
 
-// Using bracket notation select an element from myArray such that myData is equal to 8.
+// Push ["dog", 3] onto the end of the myArray variable.
 
+// Setup
 const myArray = [
-  [1, 2, 3],
-  [4, 5, 6],
-  [7, 8, 9],
-  [[10, 11, 12], 13, 14],
+  ["John", 23],
+  ["cat", 2],
 ];
 
-const myData = myArray[2][1];
+// Only change code below this line
+myArray.push(["dog", 3]);
