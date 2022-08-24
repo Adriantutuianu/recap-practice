@@ -1,14 +1,14 @@
-// You can also use bracket notation to get the character at other positions within a string.
+// In order to get the last letter of a string, you can subtract one from the string's length.
 
-// Remember that computers start counting at 0, so the first character is actually the zeroth character.
+// For example, if const firstName = "Ada", you can get the value of the last letter of the string by using firstName[firstName.length - 1].
 
 // Example:
 
 // const firstName = "Ada";
-// const secondLetterOfFirstName = firstName[1];
-// secondLetterOfFirstName would have a value of the string d.
+// const lastLetter = firstName[firstName.length - 1];
+// lastLetter would have a value of the string a.
 
-// Let's try to set thirdLetterOfLastName to equal the third letter of the lastName variable using bracket notation.
+// Use bracket notation to find the last character in the lastName variable.
 
 // Hint: Try looking at the example above if you get stuck.
 
@@ -16,4 +16,4 @@
 const lastName = "Lovelace";
 
 // Only change code below this line
-const thirdLetterOfLastName = lastName[2]; // Change this line
+const lastLetterOfLastName = lastName[lastName.length - 1]; // Change this line
