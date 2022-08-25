@@ -1,31 +1,18 @@
-// A function can include the return statement but it does not have to. In the case that the function doesn't have a return statement, when you call it, the function processes the inner code but the returned value is undefined.
+// If you'll recall from our discussion about Storing Values with the Assignment Operator, everything to the right of the equal sign is resolved before the value is assigned. This means we can take the return value of a function and assign it to a variable.
 
-// Example
+// Assume we have pre-defined a function sum which adds two numbers together, then:
 
-// let sum = 0;
+// ourSum = sum(5, 12);
+// will call the sum function, which returns a value of 17 and assigns it to the ourSum variable.
 
-// function addSum(num) {
-//   sum = sum + num;
-// }
-
-// addSum(3);
-// addSum is a function without a return statement. The function will change the global sum variable but the returned value of the function is undefined.
-
-// Create a function addFive without any arguments. This function adds 5 to the sum variable, but its returned value is undefined.
+// // Call the processArg function with an argument of 7 and assign its return value to the variable processed.
 
 // Setup
-let sum = 0;
+let processed = 0;
 
-function addThree() {
-  sum = sum + 3;
+function processArg(num) {
+  return (num + 3) / 5;
 }
 
 // Only change code below this line
-function addFive() {
-  sum = sum + 5;
-}
-
-// Only change code above this line
-
-addThree();
-addFive();
+processed = processArg(7);
