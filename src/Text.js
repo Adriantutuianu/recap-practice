@@ -1,22 +1,14 @@
-// Not only can you shift elements off of the beginning of an array, you can also unshift elements to the beginning of an array i.e. add elements in front of the array.
+// Create a shopping list in the variable myList. The list should be a multi-dimensional array containing several sub-arrays.
 
-// .unshift() works exactly like .push(), but instead of adding the element at the end of the array, unshift() adds the element at the beginning of the array.
+// The first element in each sub-array should contain a string with the name of the item. The second element should be a number representing the quantity i.e.
 
-// Example:
+// ["Chocolate Bar", 15]
+// There should be at least 5 sub-arrays in the list.
 
-// const ourArray = ["Stimpson", "J", "cat"];
-// ourArray.shift();
-// ourArray.unshift("Happy");
-// After the shift, ourArray would have the value ["J", "cat"]. After the unshift, ourArray would have the value ["Happy", "J", "cat"].
-
-// // Add ["Paul", 35] to the beginning of the myArray variable using unshift().
-
-// Setup
-const myArray = [
-  ["John", 23],
-  ["dog", 3],
+const myList = [
+  ["Bread", 2],
+  ["Sugar", 1],
+  ["Milk", 2],
+  ["Coffee", 3],
+  ["Water", 2],
 ];
-myArray.shift();
-
-// Only change code below this line
-myArray.unshift(["Paul", 35]);
