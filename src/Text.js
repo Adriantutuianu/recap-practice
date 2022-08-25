@@ -1,22 +1,20 @@
-// Another way to change the data in an array is with the .pop() function.
+// pop() always removes the last element of an array. What if you want to remove the first?
 
-// .pop() is used to pop a value off of the end of an array. We can store this popped off value by assigning it to a variable. In other words, .pop() removes the last element from an array and returns that element.
+// That's where .shift() comes in. It works just like .pop(), except it removes the first element instead of the last.
 
-// Any type of entry can be popped off of an array - numbers, strings, even nested arrays.
+// Example:
 
-// const threeArr = [1, 4, 6];
-// const oneDown = threeArr.pop();
-// console.log(oneDown);
-// console.log(threeArr);
-// The first console.log will display the value 6, and the second will display the value [1, 4].
+// const ourArray = ["Stimpson", "J", ["cat"]];
+// const removedFromOurArray = ourArray.shift();
+// removedFromOurArray would have a value of the string Stimpson, and ourArray would have ["J", ["cat"]].
 
-// Use the .pop() function to remove the last item from myArray and assign the popped off value to a new variable, removedFromMyArray.
+// Use the .shift() function to remove the first item from myArray and assign the "shifted off" value to a new variable, removedFromMyArray.
 
 // Setup
 const myArray = [
   ["John", 23],
-  ["cat", 2],
+  ["dog", 3],
 ];
 
 // Only change code below this line
-const removedFromMyArray = myArray.pop();
+const removedFromMyArray = myArray.shift();
