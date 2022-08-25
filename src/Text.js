@@ -1,28 +1,25 @@
-// In JavaScript, scope refers to the visibility of variables. Variables which are defined outside of a function block have Global scope. This means, they can be seen everywhere in your JavaScript code.
+// It is possible to have both local and global variables with the same name. When you do this, the local variable takes precedence over the global variable.
 
-// Variables which are declared without the let or const keywords are automatically created in the global scope. This can create unintended consequences elsewhere in your code or when running a function again. You should always declare your variables with let or const.
+// In this example:
 
-// Using let or const, declare a global variable named myGlobal outside of any function. Initialize it with a value of 10.
+// const someVar = "Hat";
 
-// Inside function fun1, assign 5 to oopsGlobal without using the var, let or const keywords.
+// function myFun() {
+//   const someVar = "Head";
+//   return someVar;
+// }
+// The function myFun will return the string Head because the local version of the variable is present.
 
-// Declare the myGlobal variable below this line
-let myGlobal = 10;
+// Add a local variable to myOutfit function to override the value of outerWear with the string sweater.
 
-function fun1() {
-  // Assign 5 to oopsGlobal Here
-  oopsGlobal = 5;
+// Setup
+const outerWear = "T-Shirt";
+
+function myOutfit() {
+  // Only change code below this line
+  const outerWear = "sweater";
+  // Only change code above this line
+  return outerWear;
 }
 
-// Only change code above this line
-
-function fun2() {
-  var output = "";
-  if (typeof myGlobal != "undefined") {
-    output += "myGlobal: " + myGlobal;
-  }
-  if (typeof oopsGlobal != "undefined") {
-    output += " oopsGlobal: " + oopsGlobal;
-  }
-  console.log(output);
-}
+myOutfit();
