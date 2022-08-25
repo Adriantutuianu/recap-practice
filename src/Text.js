@@ -1,14 +1,17 @@
-// Create a shopping list in the variable myList. The list should be a multi-dimensional array containing several sub-arrays.
+// In JavaScript, we can divide up our code into reusable parts called functions.
 
-// The first element in each sub-array should contain a string with the name of the item. The second element should be a number representing the quantity i.e.
+// Here's an example of a function:
 
-// ["Chocolate Bar", 15]
-// There should be at least 5 sub-arrays in the list.
+// function functionName() {
+//   console.log("Hello World");
+// }
+// You can call or invoke this function by using its name followed by parentheses, like this: functionName(); Each time the function is called it will print out the message Hello World on the dev console. All of the code between the curly braces will be executed every time the function is called.
 
-const myList = [
-  ["Bread", 2],
-  ["Sugar", 1],
-  ["Milk", 2],
-  ["Coffee", 3],
-  ["Water", 2],
-];
+// Create a function called reusableFunction which prints the string Hi World to the dev console.
+// Call the function.
+
+function reusableFunction() {
+  console.log("Hi World");
+}
+
+reusableFunction();
