@@ -1,23 +1,13 @@
-// In Computer Science a queue is an abstract Data Structure where items are kept in order. New items can be added at the back of the queue and old items are taken off from the front of the queue.
+// Another data type is the Boolean. Booleans may only be one of two values: true or false. They are basically little on-off switches, where true is on and false is off. These two states are mutually exclusive.
 
-// Write a function nextInLine which takes an array (arr) and a number (item) as arguments.
+// Note: Boolean values are never written with quotes. The strings "true" and "false" are not Boolean and have no special meaning in JavaScript.
 
-// Add the number to the end of the array, then remove the first element of the array.
+// Modify the welcomeToBooleans function so that it returns true instead of false when the run button is clicked.
 
-// // The nextInLine function should then return the element that was removed.
-
-function nextInLine(arr, item) {
+function welcomeToBooleans() {
   // Only change code below this line
-  arr.push(item);
-  const removed = arr.shift();
-  return removed;
+
+  return true; // Change this line
+
   // Only change code above this line
 }
-
-// Setup
-const testArr = [1, 2, 3, 4, 5];
-
-// Display code
-console.log("Before: " + JSON.stringify(testArr));
-console.log(nextInLine(testArr, 6));
-console.log("After: " + JSON.stringify(testArr));
