@@ -1,19 +1,27 @@
-// The strict inequality operator (!==) is the logical opposite of the strict equality operator. It means "Strictly Not Equal" and returns false where strict equality would return true and vice versa. The strict inequality operator will not convert data types.
+// The greater than operator (>) compares the values of two numbers. If the number to the left is greater than the number to the right, it returns true. Otherwise, it returns false.
+
+// Like the equality operator, the greater than operator will convert data types of values while comparing.
 
 // Examples
 
-// 3 !==  3  // false
-// 3 !== '3' // true
-// 4 !==  3  // true
-// Add the strict inequality operator to the if statement so the function will return the string Not Equal when val is not strictly equal to 17
+// 5   >  3  // true
+// 7   > '3' // true
+// 2   >  3  // false
+// '1' >  9  // false
+// Add the greater than operator to the indicated lines so that the return statements make sense.
 
-// Setup
-function testStrictNotEqual(val) {
-  if (val !== 17) {
+function testGreaterThan(val) {
+  if (val > 100) {
     // Change this line
-    return "Not Equal";
+    return "Over 100";
   }
-  return "Equal";
+
+  if (val > 10) {
+    // Change this line
+    return "Over 10";
+  }
+
+  return "10 or Under";
 }
 
-testStrictNotEqual(10);
+testGreaterThan(10);
