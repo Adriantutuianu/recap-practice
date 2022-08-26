@@ -1,26 +1,21 @@
-// In the last two challenges, we learned about the equality operator (==) and the strict equality operator (===). Let's do a quick review and practice using these operators some more.
-
-// If the values being compared are not of the same type, the equality operator will perform a type conversion, and then evaluate the values. However, the strict equality operator will compare both the data type and value as-is, without converting one type to the other.
+// The inequality operator (!=) is the opposite of the equality operator. It means not equal and returns false where equality would return true and vice versa. Like the equality operator, the inequality operator will convert data types of values while comparing.
 
 // Examples
 
-// 3 == '3' returns true because JavaScript performs type conversion from string to number. 3 === '3' returns false because the types are different and type conversion is not performed.
-
-// Note: In JavaScript, you can determine the type of a variable or a value with the typeof operator, as follows:
-
-// typeof 3
-// typeof '3'
-// typeof 3 returns the string number, and typeof '3' returns the string string.
-
-// The compareEquality function in the editor compares two values using the equality operator. Modify the function so that it returns the string Equal only when the values are strictly equal.
+// 1 !=  2    // true
+// 1 != "1"   // false
+// 1 != '1'   // false
+// 1 != true  // false
+// 0 != false // false
+// Add the inequality operator != in the if statement so that the function will return the string Not Equal when val is not equivalent to 99.
 
 // Setup
-function compareEquality(a, b) {
-  if (a === b) {
+function testNotEqual(val) {
+  if (val != 99) {
     // Change this line
-    return "Equal";
+    return "Not Equal";
   }
-  return "Not Equal";
+  return "Equal";
 }
 
-compareEquality(10, "10");
+testNotEqual(10);
