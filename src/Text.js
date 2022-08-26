@@ -1,24 +1,22 @@
-// When a condition for an if statement is true, the block of code following it is executed. What about when that condition is false? Normally nothing would happen. With an else statement, an alternate block of code can be executed.
+// If you have multiple conditions that need to be addressed, you can chain if statements together with else if statements.
 
-// if (num > 10) {
-//   return "Bigger than 10";
+// if (num > 15) {
+//   return "Bigger than 15";
+// } else if (num < 5) {
+//   return "Smaller than 5";
 // } else {
-//   return "10 or Less";
+//   return "Between 5 and 15";
 // }
-// Combine the if statements into a single if/else statement.
+// Convert the logic to use else if statements.
 
-function testElse(val) {
-  let result = "";
-  // Only change code below this line
-
-  if (val > 5) {
-    result = "Bigger than 5";
+function testElseIf(val) {
+  if (val > 10) {
+    return "Greater than 10";
+  } else if (val < 5) {
+    return "Smaller than 5";
   } else {
-    result = "5 or Smaller";
+    return "Between 5 and 10";
   }
-
-  // Only change code above this line
-  return result;
 }
 
-testElse(4);
+testElseIf(7);
