@@ -1,33 +1,24 @@
-// The logical or operator (||) returns true if either of the operands is true. Otherwise, it returns false.
-
-// The logical or operator is composed of two pipe symbols: (||). This can typically be found between your Backspace and Enter keys.
-
-// The pattern below should look familiar from prior waypoints:
+// When a condition for an if statement is true, the block of code following it is executed. What about when that condition is false? Normally nothing would happen. With an else statement, an alternate block of code can be executed.
 
 // if (num > 10) {
-//   return "No";
+//   return "Bigger than 10";
+// } else {
+//   return "10 or Less";
 // }
-// if (num < 5) {
-//   return "No";
-// }
-// return "Yes";
-// will return Yes only if num is between 5 and 10 (5 and 10 included). The same logic can be written as:
+// Combine the if statements into a single if/else statement.
 
-// if (num > 10 || num < 5) {
-//   return "No";
-// }
-// return "Yes";
-// Combine the two if statements into one statement which returns the string Outside if val is not between 10 and 20, inclusive. Otherwise, return the string Inside.
-
-function testLogicalOr(val) {
+function testElse(val) {
+  let result = "";
   // Only change code below this line
 
-  if (val < 10 || val > 20) {
-    return "Outside";
+  if (val > 5) {
+    result = "Bigger than 5";
+  } else {
+    result = "5 or Smaller";
   }
 
   // Only change code above this line
-  return "Inside";
+  return result;
 }
 
-testLogicalOr(15);
+testElse(4);
