@@ -1,18 +1,23 @@
-// If you'll recall from our discussion about Storing Values with the Assignment Operator, everything to the right of the equal sign is resolved before the value is assigned. This means we can take the return value of a function and assign it to a variable.
+// In Computer Science a queue is an abstract Data Structure where items are kept in order. New items can be added at the back of the queue and old items are taken off from the front of the queue.
 
-// Assume we have pre-defined a function sum which adds two numbers together, then:
+// Write a function nextInLine which takes an array (arr) and a number (item) as arguments.
 
-// ourSum = sum(5, 12);
-// will call the sum function, which returns a value of 17 and assigns it to the ourSum variable.
+// Add the number to the end of the array, then remove the first element of the array.
 
-// // Call the processArg function with an argument of 7 and assign its return value to the variable processed.
+// // The nextInLine function should then return the element that was removed.
 
-// Setup
-let processed = 0;
-
-function processArg(num) {
-  return (num + 3) / 5;
+function nextInLine(arr, item) {
+  // Only change code below this line
+  arr.push(item);
+  const removed = arr.shift();
+  return removed;
+  // Only change code above this line
 }
 
-// Only change code below this line
-processed = processArg(7);
+// Setup
+const testArr = [1, 2, 3, 4, 5];
+
+// Display code
+console.log("Before: " + JSON.stringify(testArr));
+console.log(nextInLine(testArr, 6));
+console.log("After: " + JSON.stringify(testArr));
