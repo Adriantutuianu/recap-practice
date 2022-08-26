@@ -1,30 +1,33 @@
-// Sometimes you will need to test more than one thing at a time. The logical and operator (&&) returns true if and only if the operands to the left and right of it are true.
+// The logical or operator (||) returns true if either of the operands is true. Otherwise, it returns false.
 
-// The same effect could be achieved by nesting an if statement inside another if:
+// The logical or operator is composed of two pipe symbols: (||). This can typically be found between your Backspace and Enter keys.
 
-// if (num > 5) {
-//   if (num < 10) {
-//     return "Yes";
-//   }
+// The pattern below should look familiar from prior waypoints:
+
+// if (num > 10) {
+//   return "No";
 // }
-// return "No";
-// will only return Yes if num is greater than 5 and less than 10. The same logic can be written as:
-
-// if (num > 5 && num < 10) {
-//   return "Yes";
+// if (num < 5) {
+//   return "No";
 // }
-// return "No";
-// Replace the two if statements with one statement, using the && operator, which will return the string Yes if val is less than or equal to 50 and greater than or equal to 25. Otherwise, will return the string No.
+// return "Yes";
+// will return Yes only if num is between 5 and 10 (5 and 10 included). The same logic can be written as:
 
-function testLogicalAnd(val) {
+// if (num > 10 || num < 5) {
+//   return "No";
+// }
+// return "Yes";
+// Combine the two if statements into one statement which returns the string Outside if val is not between 10 and 20, inclusive. Otherwise, return the string Inside.
+
+function testLogicalOr(val) {
   // Only change code below this line
 
-  if (val <= 50 && val >= 25) {
-    return "Yes";
+  if (val < 10 || val > 20) {
+    return "Outside";
   }
-  return "No";
+
+  // Only change code above this line
+  return "Inside";
 }
 
-// Only change code above this line
-
-testLogicalAnd(10);
+testLogicalOr(15);
