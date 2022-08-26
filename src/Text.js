@@ -1,26 +1,30 @@
-// The less than or equal to operator (<=) compares the values of two numbers. If the number to the left is less than or equal to the number to the right, it returns true. If the number on the left is greater than the number on the right, it returns false. Like the equality operator, the less than or equal to operator converts data types.
+// Sometimes you will need to test more than one thing at a time. The logical and operator (&&) returns true if and only if the operands to the left and right of it are true.
 
-// Examples
+// The same effect could be achieved by nesting an if statement inside another if:
 
-// 4   <= 5 // true
-// '7' <= 7 // true
-// 5   <= 5 // true
-// 3   <= 2 // false
-// '8' <= 4 // false
-// Add the less than or equal to operator to the indicated lines so that the return statements make sense.
+// if (num > 5) {
+//   if (num < 10) {
+//     return "Yes";
+//   }
+// }
+// return "No";
+// will only return Yes if num is greater than 5 and less than 10. The same logic can be written as:
 
-function testLessOrEqual(val) {
-  if (val <= 12) {
-    // Change this line
-    return "Smaller Than or Equal to 12";
+// if (num > 5 && num < 10) {
+//   return "Yes";
+// }
+// return "No";
+// Replace the two if statements with one statement, using the && operator, which will return the string Yes if val is less than or equal to 50 and greater than or equal to 25. Otherwise, will return the string No.
+
+function testLogicalAnd(val) {
+  // Only change code below this line
+
+  if (val <= 50 && val >= 25) {
+    return "Yes";
   }
-
-  if (val <= 24) {
-    // Change this line
-    return "Smaller Than or Equal to 24";
-  }
-
-  return "More Than 24";
+  return "No";
 }
 
-testLessOrEqual(10);
+// Only change code above this line
+
+testLogicalAnd(10);
