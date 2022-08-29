@@ -1,35 +1,46 @@
-// We can also delete properties from objects like this:
+// Objects can be thought of as a key/value storage, like a dictionary. If you have tabular data, you can use an object to lookup values rather than a switch statement or an if/else chain. This is most useful when you know that your input data is limited to a certain range.
 
-// delete ourDog.bark;
-// Example:
+// Here is an example of a simple reverse alphabet lookup:
 
-// const ourDog = {
-//   "name": "Camper",
-//   "legs": 4,
-//   "tails": 1,
-//   "friends": ["everything!"],
-//   "bark": "bow-wow"
+// const alpha = {
+//   1:"Z",
+//   2:"Y",
+//   3:"X",
+//   4:"W",
+//   ...
+//   24:"C",
+//   25:"B",
+//   26:"A"
 // };
 
-// delete ourDog.bark;
-// After the last line shown above, ourDog looks like:
+// const thirdLetter = alpha[2];
+// const lastLetter = alpha[24];
 
-// {
-//   "name": "Camper",
-//   "legs": 4,
-//   "tails": 1,
-//   "friends": ["everything!"]
-// }
-// Delete the tails property from myDog. You may use either dot or bracket notation.
+// const value = 2;
+// const valueLookup = alpha[value];
+// thirdLetter is the string Y, lastLetter is the string C, and valueLookup is the string Y.
+
+// // Convert the switch statement into an object called lookup. Use it to look up val and assign the associated string to the result variable.
 
 // Setup
-const myDog = {
-  name: "Happy Coder",
-  legs: 4,
-  tails: 1,
-  friends: ["freeCodeCamp Campers"],
-  bark: "woof",
-};
+function phoneticLookup(val) {
+  let result = "";
 
-// Only change code below this line
-delete myDog.tails;
+  // Only change code below this line
+  var lookup = {
+    alpha: "Adams",
+    bravo: "Boston",
+    charlie: "Chicago",
+    delta: "Denver",
+    echo: "Easy",
+    foxtrot: "Frank",
+  };
+  // After converting our case statements into object properties you can make use of the variable `result` to let the function return the correct value.
+
+  result = lookup[val];
+
+  // Only change code above this line
+  return result;
+}
+
+phoneticLookup("charlie");
