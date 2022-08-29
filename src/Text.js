@@ -1,27 +1,31 @@
-// There are two ways to access the properties of an object: dot notation (.) and bracket notation ([]), similar to an array.
+// The second way to access the properties of an object is bracket notation ([]). If the property of the object you are trying to access has a space in its name, you will need to use bracket notation.
 
-// Dot notation is what you use when you know the name of the property you're trying to access ahead of time.
+// However, you can still use bracket notation on object properties without spaces.
 
-// Here is a sample of using dot notation (.) to read an object's property:
+// Here is a sample of using bracket notation to read an object's property:
 
 // const myObj = {
-//   prop1: "val1",
-//   prop2: "val2"
+//   "Space Name": "Kirk",
+//   "More Space": "Spock",
+//   "NoSpace": "USS Enterprise"
 // };
 
-// const prop1val = myObj.prop1;
-// const prop2val = myObj.prop2;
-// prop1val would have a value of the string val1, and prop2val would have a value of the string val2.
+// myObj["Space Name"];
+// myObj['More Space'];
+// myObj["NoSpace"];
+// myObj["Space Name"] would be the string Kirk, myObj['More Space'] would be the string Spock, and myObj["NoSpace"] would be the string USS Enterprise.
 
-// Read in the property values of testObj using dot notation. Set the variable hatValue equal to the object's property hat and set the variable shirtValue equal to the object's property shirt.
+// Note that property names with spaces in them must be in quotes (single or double).
+
+// Read the values of the properties an entree and the drink of testObj using bracket notation and assign them to entreeValue and drinkValue respectively.
 
 // Setup
 const testObj = {
-  hat: "ballcap",
-  shirt: "jersey",
-  shoes: "cleats",
+  "an entree": "hamburger",
+  "my side": "veggies",
+  "the drink": "water",
 };
 
 // Only change code below this line
-const hatValue = testObj.hat; // Change this line
-const shirtValue = testObj.shirt; // Change this line
+const entreeValue = testObj["an entree"]; // Change this line
+const drinkValue = testObj["the drink"]; // Change this line
