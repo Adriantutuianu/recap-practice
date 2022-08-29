@@ -1,31 +1,29 @@
-// The second way to access the properties of an object is bracket notation ([]). If the property of the object you are trying to access has a space in its name, you will need to use bracket notation.
+// Another use of bracket notation on objects is to access a property which is stored as the value of a variable. This can be very useful for iterating through an object's properties or when accessing a lookup table.
 
-// However, you can still use bracket notation on object properties without spaces.
+// Here is an example of using a variable to access a property:
 
-// Here is a sample of using bracket notation to read an object's property:
-
-// const myObj = {
-//   "Space Name": "Kirk",
-//   "More Space": "Spock",
-//   "NoSpace": "USS Enterprise"
+// const dogs = {
+//   Fido: "Mutt",
+//   Hunter: "Doberman",
+//   Snoopie: "Beagle"
 // };
 
-// myObj["Space Name"];
-// myObj['More Space'];
-// myObj["NoSpace"];
-// myObj["Space Name"] would be the string Kirk, myObj['More Space'] would be the string Spock, and myObj["NoSpace"] would be the string USS Enterprise.
+// const myDog = "Hunter";
+// const myBreed = dogs[myDog];
+// console.log(myBreed);
+// The string Doberman would be displayed in the console.
 
-// Note that property names with spaces in them must be in quotes (single or double).
+// Note that we do not use quotes around the variable name when using it to access the property because we are using the value of the variable, not the name.
 
-// Read the values of the properties an entree and the drink of testObj using bracket notation and assign them to entreeValue and drinkValue respectively.
+// Set the playerNumber variable to 16. Then, use the variable to look up the player's name and assign it to player.
 
 // Setup
 const testObj = {
-  "an entree": "hamburger",
-  "my side": "veggies",
-  "the drink": "water",
+  12: "Namath",
+  16: "Montana",
+  19: "Unitas",
 };
 
 // Only change code below this line
-const entreeValue = testObj["an entree"]; // Change this line
-const drinkValue = testObj["the drink"]; // Change this line
+const playerNumber = 16; // Change this line
+const player = testObj[playerNumber]; // Change this line
