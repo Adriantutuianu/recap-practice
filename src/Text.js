@@ -1,36 +1,27 @@
-// You may have heard the term object before.
+// There are two ways to access the properties of an object: dot notation (.) and bracket notation ([]), similar to an array.
 
-// Objects are similar to arrays, except that instead of using indexes to access and modify their data, you access the data in objects through what are called properties.
+// Dot notation is what you use when you know the name of the property you're trying to access ahead of time.
 
-// Objects are useful for storing data in a structured way, and can represent real world objects, like a cat.
+// Here is a sample of using dot notation (.) to read an object's property:
 
-// Here's a sample cat object:
-
-// const cat = {
-//   "name": "Whiskers",
-//   "legs": 4,
-//   "tails": 1,
-//   "enemies": ["Water", "Dogs"]
+// const myObj = {
+//   prop1: "val1",
+//   prop2: "val2"
 // };
-// In this example, all the properties are stored as strings, such as name, legs, and tails. However, you can also use numbers as properties. You can even omit the quotes for single-word string properties, as follows:
 
-// const anotherObject = {
-//   make: "Ford",
-//   5: "five",
-//   "model": "focus"
-// };
-// However, if your object has any non-string properties, JavaScript will automatically typecast them as strings.
+// const prop1val = myObj.prop1;
+// const prop2val = myObj.prop2;
+// prop1val would have a value of the string val1, and prop2val would have a value of the string val2.
 
-// Make an object that represents a dog called myDog which contains the properties name (a string), legs, tails and friends.
+// Read in the property values of testObj using dot notation. Set the variable hatValue equal to the object's property hat and set the variable shirtValue equal to the object's property shirt.
 
-// You can set these object properties to whatever values you want, as long as name is a string, legs and tails are numbers, and friends is an array.
-
-const myDog = {
-  // Only change code below this line
-  name: "Dog",
-  legs: 4,
-  tails: 1,
-  friends: ["Dog", "Dog"],
-
-  // Only change code above this line
+// Setup
+const testObj = {
+  hat: "ballcap",
+  shirt: "jersey",
+  shoes: "cleats",
 };
+
+// Only change code below this line
+const hatValue = testObj.hat; // Change this line
+const shirtValue = testObj.shirt; // Change this line
