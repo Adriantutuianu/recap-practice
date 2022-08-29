@@ -1,46 +1,26 @@
-// Objects can be thought of as a key/value storage, like a dictionary. If you have tabular data, you can use an object to lookup values rather than a switch statement or an if/else chain. This is most useful when you know that your input data is limited to a certain range.
+// Sometimes it is useful to check if the property of a given object exists or not. We can use the .hasOwnProperty(propname) method of objects to determine if that object has the given property name. .hasOwnProperty() returns true or false if the property is found or not.
 
-// Here is an example of a simple reverse alphabet lookup:
+// Example
 
-// const alpha = {
-//   1:"Z",
-//   2:"Y",
-//   3:"X",
-//   4:"W",
-//   ...
-//   24:"C",
-//   25:"B",
-//   26:"A"
+// const myObj = {
+//   top: "hat",
+//   bottom: "pants"
 // };
 
-// const thirdLetter = alpha[2];
-// const lastLetter = alpha[24];
+// myObj.hasOwnProperty("top");
+// myObj.hasOwnProperty("middle");
+// The first hasOwnProperty returns true, while the second returns false.
 
-// const value = 2;
-// const valueLookup = alpha[value];
-// thirdLetter is the string Y, lastLetter is the string C, and valueLookup is the string Y.
+// Modify the function checkObj to test if an object passed to the function (obj) contains a specific property (checkProp). If the property is found, return that property's value. If not, return "Not Found".
 
-// // Convert the switch statement into an object called lookup. Use it to look up val and assign the associated string to the result variable.
-
-// Setup
-function phoneticLookup(val) {
-  let result = "";
-
+function checkObj(obj, checkProp) {
   // Only change code below this line
-  var lookup = {
-    alpha: "Adams",
-    bravo: "Boston",
-    charlie: "Chicago",
-    delta: "Denver",
-    echo: "Easy",
-    foxtrot: "Frank",
-  };
-  // After converting our case statements into object properties you can make use of the variable `result` to let the function return the correct value.
 
-  result = lookup[val];
+  if (obj.hasOwnProperty(checkProp)) {
+    return obj[checkProp];
+  } else {
+    return "Not Found";
+  }
 
   // Only change code above this line
-  return result;
 }
-
-phoneticLookup("charlie");
