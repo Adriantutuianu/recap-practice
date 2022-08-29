@@ -1,30 +1,35 @@
-// You can add new properties to existing JavaScript objects the same way you would modify them.
+// We can also delete properties from objects like this:
 
-// Here's how we would add a bark property to ourDog:
-
-// ourDog.bark = "bow-wow";
-// or
-
-// ourDog["bark"] = "bow-wow";
-// Now when we evaluate ourDog.bark, we'll get his bark, bow-wow.
-
+// delete ourDog.bark;
 // Example:
 
 // const ourDog = {
 //   "name": "Camper",
 //   "legs": 4,
 //   "tails": 1,
-//   "friends": ["everything!"]
+//   "friends": ["everything!"],
+//   "bark": "bow-wow"
 // };
 
-// ourDog.bark = "bow-wow";
-// Add a bark property to myDog and set it to a dog sound, such as "woof". You may use either dot or bracket notation.
+// delete ourDog.bark;
+// After the last line shown above, ourDog looks like:
 
+// {
+//   "name": "Camper",
+//   "legs": 4,
+//   "tails": 1,
+//   "friends": ["everything!"]
+// }
+// Delete the tails property from myDog. You may use either dot or bracket notation.
+
+// Setup
 const myDog = {
   name: "Happy Coder",
   legs: 4,
   tails: 1,
   friends: ["freeCodeCamp Campers"],
+  bark: "woof",
 };
 
-myDog.bark = "woof";
+// Only change code below this line
+delete myDog.tails;
