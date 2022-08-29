@@ -1,43 +1,45 @@
-// If you have many options to choose from, use a switch statement. A switch statement tests a value and can have many case statements which define various possible values. Statements are executed from the first matched case value until a break is encountered.
+// In a switch statement you may not be able to specify all possible values as case statements. Instead, you can add the default statement which will be executed if no matching case statements are found. Think of it like the final else statement in an if/else chain.
 
-// Here is an example of a switch statement:
+// A default statement should be the last case.
 
-// switch (lowercaseLetter) {
-//   case "a":
-//     console.log("A");
+// switch (num) {
+//   case value1:
+//     statement1;
 //     break;
-//   case "b":
-//     console.log("B");
+//   case value2:
+//     statement2;
+//     break;
+// ...
+//   default:
+//     defaultStatement;
 //     break;
 // }
-// case values are tested with strict equality (===). The break tells JavaScript to stop executing statements. If the break is omitted, the next statement will be executed.
+// Write a switch statement to set answer for the following conditions:
+// a - apple
+// b - bird
+// c - cat
+// default - stuff
 
-// Write a switch statement which tests val and sets answer for the following conditions:
-// 1 - alpha
-// 2 - beta
-// 3 - gamma
-// 4 - delta
-
-function caseInSwitch(val) {
+function switchOfStuff(val) {
   let answer = "";
   // Only change code below this line
+
   switch (val) {
-    case 1:
-      answer = "alpha";
+    case "a":
+      answer = "apple";
       break;
-    case 2:
-      answer = "beta";
+    case "b":
+      answer = "bird";
       break;
-    case 3:
-      answer = "gamma";
+    case "c":
+      answer = "cat";
       break;
-    case 4:
-      answer = "delta";
-      break;
+    default:
+      answer = "stuff";
   }
 
   // Only change code above this line
   return answer;
 }
 
-caseInSwitch(1);
+switchOfStuff(1);
