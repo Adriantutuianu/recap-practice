@@ -1,25 +1,30 @@
-// You may recall from Comparison with the Equality Operator that all comparison operators return a boolean true or false value.
+// When a return statement is reached, the execution of the current function stops and control returns to the calling location.
 
-// Sometimes people use an if/else statement to do a comparison, like this:
+// Example
 
-// function isEqual(a, b) {
-//   if (a === b) {
-//     return true;
-//   } else {
-//     return false;
-//   }
+// function myFun() {
+//   console.log("Hello");
+//   return "World";
+//   console.log("byebye")
 // }
-// But there's a better way to do this. Since === returns true or false, we can return the result of the comparison:
+// myFun();
+// The above will display the string Hello in the console, and return the string World. The string byebye will never display in the console, because the function exits at the return statement.
 
-// function isEqual(a, b) {
-//   return a === b;
-// }
-// Fix the function isLess to remove the if/else statements.
+// Modify the function abTest so that if a or b are less than 0 the function will immediately exit with a value of undefined.
 
-function isLess(a, b) {
+// Hint
+// Remember that undefined is a keyword, not a string.
+
+// Setup
+function abTest(a, b) {
   // Only change code below this line
-  return a < b;
+  if (a < 0 || b < 0) {
+    return undefined;
+  }
+
   // Only change code above this line
+
+  return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
 }
 
-isLess(10, 15);
+abTest(2, 2);
