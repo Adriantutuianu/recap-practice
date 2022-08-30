@@ -1,26 +1,39 @@
-// Sometimes it is useful to check if the property of a given object exists or not. We can use the .hasOwnProperty(propname) method of objects to determine if that object has the given property name. .hasOwnProperty() returns true or false if the property is found or not.
+// Sometimes you may want to store data in a flexible Data Structure. A JavaScript object is one way to handle flexible data. They allow for arbitrary combinations of strings, numbers, booleans, arrays, functions, and objects.
 
-// Example
+// Here's an example of a complex data structure:
 
-// const myObj = {
-//   top: "hat",
-//   bottom: "pants"
-// };
+// const ourMusic = [
+//   {
+//     "artist": "Daft Punk",
+//     "title": "Homework",
+//     "release_year": 1997,
+//     "formats": [
+//       "CD",
+//       "Cassette",
+//       "LP"
+//     ],
+//     "gold": true
+//   }
+// ];
+// This is an array which contains one object inside. The object has various pieces of metadata about an album. It also has a nested formats array. If you want to add more album records, you can do this by adding records to the top level array. Objects hold data in a property, which has a key-value format. In the example above, "artist": "Daft Punk" is a property that has a key of artist and a value of Daft Punk.
 
-// myObj.hasOwnProperty("top");
-// myObj.hasOwnProperty("middle");
-// The first hasOwnProperty returns true, while the second returns false.
+// Note: You will need to place a comma after every object in the array, unless it is the last object in the array.
 
-// Modify the function checkObj to test if an object passed to the function (obj) contains a specific property (checkProp). If the property is found, return that property's value. If not, return "Not Found".
+// Add a new album to the myMusic array. Add artist and title strings, release_year number, and a formats array of strings.
 
-function checkObj(obj, checkProp) {
-  // Only change code below this line
-
-  if (obj.hasOwnProperty(checkProp)) {
-    return obj[checkProp];
-  } else {
-    return "Not Found";
-  }
-
-  // Only change code above this line
-}
+const myMusic = [
+  {
+    artist: "Billy Joel",
+    title: "Piano Man",
+    release_year: 1973,
+    formats: ["CD", "8T", "LP"],
+    gold: true,
+  },
+  // Add record here
+  {
+    artist: "Deep Purple",
+    title: "Smoke on the water",
+    release_year: 1976,
+    formats: ["CD", "8T", "LP"],
+  },
+];
