@@ -1,17 +1,26 @@
-// The parseInt() function parses a string and returns an integer. It takes a second argument for the radix, which specifies the base of the number in the string. The radix can be an integer between 2 and 36.
+// The conditional operator, also called the ternary operator, can be used as a one line if-else expression.
 
-// The function call looks like:
+// The syntax is a ? b : c, where a is the condition, b is the code to run when the condition returns true, and c is the code to run when the condition returns false.
 
-// parseInt(string, radix);
-// And here's an example:
+// The following function uses an if/else statement to check a condition:
 
-// const a = parseInt("11", 2);
-// The radix variable says that 11 is in the binary system, or base 2. This example converts the string 11 to an integer 3.
+// function findGreater(a, b) {
+//   if(a > b) {
+//     return "a is greater";
+//   }
+//   else {
+//     return "b is greater or equal";
+//   }
+// }
+// This can be re-written using the conditional operator:
 
-// Use parseInt() in the convertToInteger function so it converts a binary number to an integer and returns it.
+// function findGreater(a, b) {
+//   return a > b ? "a is greater" : "b is greater or equal";
+// }
+// Use the conditional operator in the checkEqual function to check if two numbers are equal or not. The function should return either the string Equal or the string Not Equal.
 
-function convertToInteger(str) {
-  return parseInt(str, 2);
+function checkEqual(a, b) {
+  return a === b ? "Equal" : "Not Equal";
 }
 
-convertToInteger("10011");
+checkEqual(1, 2);
