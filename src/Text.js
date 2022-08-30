@@ -1,36 +1,41 @@
-// The sub-properties of objects can be accessed by chaining together the dot or bracket notation.
+// As we have seen in earlier examples, objects can contain both nested objects and nested arrays. Similar to accessing nested objects, array bracket notation can be chained to access nested arrays.
 
-// Here is a nested object:
+// Here is an example of how to access a nested array:
 
-// const ourStorage = {
-//   "desk": {
-//     "drawer": "stapler"
+// const ourPets = [
+//   {
+//     animalType: "cat",
+//     names: [
+//       "Meowzer",
+//       "Fluffy",
+//       "Kit-Cat"
+//     ]
 //   },
-//   "cabinet": {
-//     "top drawer": {
-//       "folder1": "a file",
-//       "folder2": "secrets"
-//     },
-//     "bottom drawer": "soda"
+//   {
+//     animalType: "dog",
+//     names: [
+//       "Spot",
+//       "Bowser",
+//       "Frankie"
+//     ]
 //   }
-// };
+// ];
 
-// ourStorage.cabinet["top drawer"].folder2;
-// ourStorage.desk.drawer;
-// ourStorage.cabinet["top drawer"].folder2 would be the string secrets, and ourStorage.desk.drawer would be the string stapler.
+// ourPets[0].names[1];
+// ourPets[1].names[0];
+// ourPets[0].names[1] would be the string Fluffy, and ourPets[1].names[0] would be the string Spot.
 
-// Access the myStorage object and assign the contents of the glove box property to the gloveBoxContents variable. Use dot notation for all properties where possible, otherwise use bracket notation.
+// Using dot and bracket notation, set the variable secondTree to the second item in the trees list from the myPlants object.
 
-const myStorage = {
-  car: {
-    inside: {
-      "glove box": "maps",
-      "passenger seat": "crumbs",
-    },
-    outside: {
-      trunk: "jack",
-    },
+const myPlants = [
+  {
+    type: "flowers",
+    list: ["rose", "tulip", "dandelion"],
   },
-};
+  {
+    type: "trees",
+    list: ["fir", "pine", "birch"],
+  },
+];
 
-const gloveBoxContents = myStorage.car.inside["glove box"];
+const secondTree = myPlants[1].list[1];
