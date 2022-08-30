@@ -1,22 +1,19 @@
-// A for loop can also count backwards, so long as we can define the right conditions.
+// A common task in JavaScript is to iterate through the contents of an array. One way to do that is with a for loop. This code will output each element of the array arr to the console:
 
-// In order to decrement by two each iteration, we'll need to change our initialization, condition, and final expression.
+// const arr = [10, 9, 8, 7, 6];
 
-// We'll start at i = 10 and loop while i > 0. We'll decrement i by 2 each loop with i -= 2.
-
-// const ourArray = [];
-
-// for (let i = 10; i > 0; i -= 2) {
-//   ourArray.push(i);
+// for (let i = 0; i < arr.length; i++) {
+//    console.log(arr[i]);
 // }
-// ourArray will now contain [10, 8, 6, 4, 2]. Let's change our initialization and final expression so we can count backwards by twos to create an array of descending odd numbers.
+// Remember that arrays have zero-based indexing, which means the last index of the array is length - 1. Our condition for this loop is i < arr.length, which stops the loop when i is equal to length. In this case the last iteration is i === 4 i.e. when i becomes equal to arr.length - 1 and outputs 6 to the console. Then i increases to 5, and the loop terminates because i < arr.length is false.
 
-// Push the odd numbers from 9 through 1 to myArray using a for loop.
+// Declare and initialize a variable total to 0. Use a for loop to add the value of each element of the myArr array to total.
 
 // Setup
-const myArray = [];
+const myArr = [2, 3, 4, 5, 6];
 
 // Only change code below this line
-for (let i = 9; i > 0; i -= 2) {
-  myArray.push(i);
+let total = 0;
+for (let i = 0; i < myArr.length; i++) {
+  total += myArr[i];
 }
