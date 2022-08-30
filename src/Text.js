@@ -1,19 +1,33 @@
-// A common task in JavaScript is to iterate through the contents of an array. One way to do that is with a for loop. This code will output each element of the array arr to the console:
+// If you have a multi-dimensional array, you can use the same logic as the prior waypoint to loop through both the array and any sub-arrays. Here is an example:
 
-// const arr = [10, 9, 8, 7, 6];
+// const arr = [
+//   [1, 2], [3, 4], [5, 6]
+// ];
 
 // for (let i = 0; i < arr.length; i++) {
-//    console.log(arr[i]);
+//   for (let j = 0; j < arr[i].length; j++) {
+//     console.log(arr[i][j]);
+//   }
 // }
-// Remember that arrays have zero-based indexing, which means the last index of the array is length - 1. Our condition for this loop is i < arr.length, which stops the loop when i is equal to length. In this case the last iteration is i === 4 i.e. when i becomes equal to arr.length - 1 and outputs 6 to the console. Then i increases to 5, and the loop terminates because i < arr.length is false.
+// This outputs each sub-element in arr one at a time. Note that for the inner loop, we are checking the .length of arr[i], since arr[i] is itself an array.
 
-// Declare and initialize a variable total to 0. Use a for loop to add the value of each element of the myArr array to total.
+// Modify function multiplyAll so that it returns the product of all the numbers in the sub-arrays of arr.
 
-// Setup
-const myArr = [2, 3, 4, 5, 6];
-
-// Only change code below this line
-let total = 0;
-for (let i = 0; i < myArr.length; i++) {
-  total += myArr[i];
+function multiplyAll(arr) {
+  let product = 1;
+  // Only change code below this line
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr[i].length; j++) {
+      product = product * arr[i][j];
+    }
+  }
+  // Only change code above this line
+  return product;
 }
+
+// Modify values below to test your code
+multiplyAll([
+  [1, 2],
+  [3, 4],
+  [5, 6, 7],
+]);
