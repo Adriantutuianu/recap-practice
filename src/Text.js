@@ -1,56 +1,18 @@
-// We have an array of objects representing different people in our contacts lists.
+// Random numbers are useful for creating random behavior.
 
-// A lookUpProfile function that takes name and a property (prop) as arguments has been pre-written for you.
+// JavaScript has a Math.random() function that generates a random decimal number between 0 (inclusive) and 1 (exclusive). Thus Math.random() can return a 0 but never return a 1.
 
-// The function should check if name is an actual contact's firstName and the given property (prop) is a property of that contact.
+// Note: Like Storing Values with the Assignment Operator, all function calls will be resolved before the return executes, so we can return the value of the Math.random() function.
 
-// If both are true, then return the "value" of that property.
+// Change randomFraction to return a random number instead of returning 0.
 
-// If name does not correspond to any contacts then return the string No such contact.
-
-// If prop does not correspond to any valid properties of a contact found to match name then return the string No such property.
-
-// Setup
-const contacts = [
-  {
-    firstName: "Akira",
-    lastName: "Laine",
-    number: "0543236543",
-    likes: ["Pizza", "Coding", "Brownie Points"],
-  },
-  {
-    firstName: "Harry",
-    lastName: "Potter",
-    number: "0994372684",
-    likes: ["Hogwarts", "Magic", "Hagrid"],
-  },
-  {
-    firstName: "Sherlock",
-    lastName: "Holmes",
-    number: "0487345643",
-    likes: ["Intriguing Cases", "Violin"],
-  },
-  {
-    firstName: "Kristian",
-    lastName: "Vos",
-    number: "unknown",
-    likes: ["JavaScript", "Gaming", "Foxes"],
-  },
-];
-
-// Only change code below this line
-function lookUpProfile(name, prop) {
-  for (let x = 0; x < contacts.length; x++) {
-    if (contacts[x].firstName === name) {
-      if (contacts[x].hasOwnProperty(prop)) {
-        return contacts[x][prop];
-      } else {
-        return "No such property";
-      }
-    }
+function randomFraction() {
+  // Only change code below this line
+  let result = 0;
+  while (result === 0) {
+    result = Math.random();
   }
-  return "No such contact";
-}
-// Only change code above this line
+  return result;
 
-lookUpProfile("Akira", "likes");
+  // Only change code above this line
+}
