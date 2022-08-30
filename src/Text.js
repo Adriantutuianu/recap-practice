@@ -1,39 +1,36 @@
-// Sometimes you may want to store data in a flexible Data Structure. A JavaScript object is one way to handle flexible data. They allow for arbitrary combinations of strings, numbers, booleans, arrays, functions, and objects.
+// The sub-properties of objects can be accessed by chaining together the dot or bracket notation.
 
-// Here's an example of a complex data structure:
+// Here is a nested object:
 
-// const ourMusic = [
-//   {
-//     "artist": "Daft Punk",
-//     "title": "Homework",
-//     "release_year": 1997,
-//     "formats": [
-//       "CD",
-//       "Cassette",
-//       "LP"
-//     ],
-//     "gold": true
+// const ourStorage = {
+//   "desk": {
+//     "drawer": "stapler"
+//   },
+//   "cabinet": {
+//     "top drawer": {
+//       "folder1": "a file",
+//       "folder2": "secrets"
+//     },
+//     "bottom drawer": "soda"
 //   }
-// ];
-// This is an array which contains one object inside. The object has various pieces of metadata about an album. It also has a nested formats array. If you want to add more album records, you can do this by adding records to the top level array. Objects hold data in a property, which has a key-value format. In the example above, "artist": "Daft Punk" is a property that has a key of artist and a value of Daft Punk.
+// };
 
-// Note: You will need to place a comma after every object in the array, unless it is the last object in the array.
+// ourStorage.cabinet["top drawer"].folder2;
+// ourStorage.desk.drawer;
+// ourStorage.cabinet["top drawer"].folder2 would be the string secrets, and ourStorage.desk.drawer would be the string stapler.
 
-// Add a new album to the myMusic array. Add artist and title strings, release_year number, and a formats array of strings.
+// Access the myStorage object and assign the contents of the glove box property to the gloveBoxContents variable. Use dot notation for all properties where possible, otherwise use bracket notation.
 
-const myMusic = [
-  {
-    artist: "Billy Joel",
-    title: "Piano Man",
-    release_year: 1973,
-    formats: ["CD", "8T", "LP"],
-    gold: true,
+const myStorage = {
+  car: {
+    inside: {
+      "glove box": "maps",
+      "passenger seat": "crumbs",
+    },
+    outside: {
+      trunk: "jack",
+    },
   },
-  // Add record here
-  {
-    artist: "Deep Purple",
-    title: "Smoke on the water",
-    release_year: 1976,
-    formats: ["CD", "8T", "LP"],
-  },
-];
+};
+
+const gloveBoxContents = myStorage.car.inside["glove box"];
