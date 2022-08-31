@@ -1,30 +1,25 @@
-// Off by one errors (sometimes called OBOE) crop up when you're trying to target a specific index of a string or array (to slice or access a segment), or when looping over the indices of them. JavaScript indexing starts at zero, not one, which means the last index is always one less than the length of the item. If you try to access an index equal to the length, the program may throw an "index out of range" reference error or print undefined.
+// Sometimes it's necessary to save information, increment counters, or re-set variables within a loop. A potential issue is when variables either should be reinitialized, and aren't, or vice versa. This is particularly dangerous if you accidentally reset the variable being used for the terminal condition, causing an infinite loop.
 
-// When you use string or array methods that take index ranges as arguments, it helps to read the documentation and understand if they are inclusive (the item at the given index is part of what's returned) or not. Here are some examples of off by one errors:
+// Printing variable values with each cycle of your loop by using console.log() can uncover buggy behavior related to resetting, or failing to reset a variable.
 
-// let alphabet = "abcdefghijklmnopqrstuvwxyz";
-// let len = alphabet.length;
-// for (let i = 0; i <= len; i++) {
-//   console.log(alphabet[i]);
-// }
-// for (let j = 1; j < len; j++) {
-//   console.log(alphabet[j]);
-// }
-// for (let k = 0; k < len; k++) {
-//   console.log(alphabet[k]);
-// }
-// The first example here loops one too many times, and the second loops one too few times (missing the first index, 0). The third example is correct.
+// The following function is supposed to create a two-dimensional array with m rows and n columns of zeroes. Unfortunately, it's not producing the expected output because the row variable isn't being reinitialized (set back to an empty array) in the outer loop. Fix the code so it returns a correct 3x2 array of zeroes, which looks like [[0, 0], [0, 0], [0, 0]].
 
-// Fix the two indexing errors in the following function so all the numbers 1 through 5 are printed to the console.
+function zeroArray(m, n) {
+  // Creates a 2-D array with m rows and n columns of zeroes
+  let newArray = [];
+  for (let i = 0; i < m; i++) {
+    // Adds the m-th row into newArray
+    let row = [];
 
-function countToFive() {
-  let firstFive = "12345";
-  let len = firstFive.length;
-  // Only change code below this line
-  for (let i = 0; i < len; i++) {
-    // Only change code above this line
-    console.log(firstFive[i]);
+    for (let j = 0; j < n; j++) {
+      // Pushes n zeroes into the current row to create the columns
+      row.push(0);
+    }
+    // Pushes the current row, which now has n zeroes in it, to the array
+    newArray.push(row);
   }
+  return newArray;
 }
 
-countToFive();
+let matrix = zeroArray(3, 2);
+console.log(matrix);
