@@ -1,18 +1,33 @@
-// The final topic is the dreaded infinite loop. Loops are great tools when you need your program to run a code block a certain number of times or until a condition is met, but they need a terminal condition that ends the looping. Infinite loops are likely to freeze or crash the browser, and cause general program execution mayhem, which no one wants.
+// The below is an example of the simplest implementation of an array data structure. This is known as a one-dimensional array, meaning it only has one level, or that it does not have any other arrays nested within it. Notice it contains booleans, strings, and numbers, among other valid JavaScript data types:
 
-// There was an example of an infinite loop in the introduction to this section - it had no terminal condition to break out of the while loop inside loopy(). Do NOT call this function!
+// let simpleArray = ['one', 2, 'three', true, false, undefined, null];
+// console.log(simpleArray.length);
+// The console.log call displays 7.
 
-// function loopy() {
-//   while(true) {
-//     console.log("Hello, world!");
-//   }
-// }
-// It's the programmer's job to ensure that the terminal condition, which tells the program when to break out of the loop code, is eventually reached. One error is incrementing or decrementing a counter variable in the wrong direction from the terminal condition. Another one is accidentally resetting a counter or index variable within the loop code, instead of incrementing or decrementing it.
+// All arrays have a length property, which as shown above, can be very easily accessed with the syntax Array.length. A more complex implementation of an array can be seen below. This is known as a multi-dimensional array, or an array that contains other arrays. Notice that this array also contains JavaScript objects, which we will examine very closely in our next section, but for now, all you need to know is that arrays are also capable of storing complex objects.
 
-// The myFunc() function contains an infinite loop because the terminal condition i != 4 will never evaluate to false (and break the looping) - i will increment by 2 each pass, and jump right over 4 since i is odd to start. Fix the comparison operator in the terminal condition so the loop only runs for i less than or equal to 4.
+// let complexArray = [
+//   [
+//     {
+//       one: 1,
+//       two: 2
+//     },
+//     {
+//       three: 3,
+//       four: 4
+//     }
+//   ],
+//   [
+//     {
+//       a: "a",
+//       b: "b"
+//     },
+//     {
+//       c: "c",
+//       d: "d"
+//     }
+//   ]
+// ];
+// We have defined a variable called yourArray. Complete the statement by assigning an array of at least 5 elements in length to the yourArray variable. Your array should contain at least one string, one number, and one boolean.
 
-function myFunc() {
-  for (let i = 1; i <= 4; i += 2) {
-    console.log("Still going!");
-  }
-}
+let yourArray = ["one", 2, "three", true, false, undefined, null]; // Change this line
