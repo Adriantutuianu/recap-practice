@@ -1,21 +1,12 @@
-// When a function or method doesn't take any arguments, you may forget to include the (empty) opening and closing parentheses when calling it. Often times the result of a function call is saved in a variable for other use in your code. This error can be detected by logging variable values (or their types) to the console and seeing that one is set to a function reference, instead of the expected value the function returns.
+// Continuing the discussion on calling functions, the next bug to watch out for is when a function's arguments are supplied in the incorrect order. If the arguments are different types, such as a function expecting an array and an integer, this will likely throw a runtime error. If the arguments are the same type (all integers, for example), then the logic of the code won't make sense. Make sure to supply all required arguments, in the proper order to avoid these issues.
 
-// The variables in the following example are different:
+// The function raiseToPower raises a base to an exponent. Unfortunately, it's not called properly - fix the code so the value of power is the expected 8.
 
-// function myFunction() {
-//   return "You rock!";
-// }
-// let varOne = myFunction;
-// let varTwo = myFunction();
-// Here varOne is the function myFunction, and varTwo is the string You rock!.
-
-// Fix the code so the variable result is set to the value returned from calling the function getNine.
-
-function getNine() {
-  let x = 6;
-  let y = 3;
-  return x + y;
+function raiseToPower(b, e) {
+  return Math.pow(b, e);
 }
 
-let result = getNine();
-console.log(result);
+let base = 2;
+let exp = 3;
+let power = raiseToPower(base, exp);
+console.log(power);
