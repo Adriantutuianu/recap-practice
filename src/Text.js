@@ -1,26 +1,37 @@
-// Now you know what objects are and their basic features and advantages. In short, they are key-value stores which provide a flexible, intuitive way to structure data, and, they provide very fast lookup time. Throughout the rest of these challenges, we will describe several common operations you can perform on objects so you can become comfortable applying these useful data structures in your programs.
+// Now we can add, modify, and remove keys from objects. But what if we just wanted to know if an object has a specific property? JavaScript provides us with two different ways to do this. One uses the hasOwnProperty() method and the other uses the in keyword. If we have an object users with a property of Alan, we could check for its presence in either of the following ways:
 
-// In earlier challenges, we have both added to and modified an object's key-value pairs. Here we will see how we can remove a key-value pair from an object.
+// users.hasOwnProperty('Alan');
+// 'Alan' in users;
+// Both of these would return true.
 
-// Let's revisit our foods object example one last time. If we wanted to remove the apples key, we can remove it by using the delete keyword like this:
+// // Finish writing the function so that it returns true if the object passed to it contains all four names, Alan, Jeff, Sarah and Ryan and returns false otherwise.
 
-// delete foods.apples;
-// Use the delete keyword to remove the oranges, plums, and strawberries keys from the foods object.
-
-let foods = {
-  apples: 25,
-  oranges: 32,
-  plums: 28,
-  bananas: 13,
-  grapes: 35,
-  strawberries: 27,
+let users = {
+  Alan: {
+    age: 27,
+    online: true,
+  },
+  Jeff: {
+    age: 32,
+    online: true,
+  },
+  Sarah: {
+    age: 48,
+    online: true,
+  },
+  Ryan: {
+    age: 19,
+    online: true,
+  },
 };
-
-// Only change code below this line
-delete foods.oranges;
-delete foods.plums;
-delete foods.strawberries;
-
-// Only change code above this line
-
-console.log(foods);
+function isEveryoneHere(userObj) {
+  if (
+    userObj.hasOwnProperty("Alan") &&
+    userObj.hasOwnProperty("Jeff") &&
+    userObj.hasOwnProperty("Sarah") &&
+    userObj.hasOwnProperty("Ryan")
+  ) {
+    return true;
+  }
+  return false;
+}
