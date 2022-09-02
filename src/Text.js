@@ -1,18 +1,22 @@
-// Another huge advantage of the spread operator is the ability to combine arrays, or to insert all the elements of one array into another, at any index. With more traditional syntaxes, we can concatenate arrays, but this only allows us to combine arrays at the end of one, and at the start of another. Spread syntax makes the following operation extremely simple:
+// Since arrays can be changed, or mutated, at any time, there's no guarantee about where a particular piece of data will be on a given array, or if that element even still exists. Luckily, JavaScript provides us with another built-in method, indexOf(), that allows us to quickly and easily check for the presence of an element on an array. indexOf() takes an element as a parameter, and when called, it returns the position, or index, of that element, or -1 if the element does not exist on the array.
 
-// let thisArray = ['sage', 'rosemary', 'parsley', 'thyme'];
+// For example:
 
-// let thatArray = ['basil', 'cilantro', ...thisArray, 'coriander'];
-// thatArray would have the value ['basil', 'cilantro', 'sage', 'rosemary', 'parsley', 'thyme', 'coriander'].
+// let fruits = ['apples', 'pears', 'oranges', 'peaches', 'pears'];
 
-// Using spread syntax, we have just achieved an operation that would have been more complex and more verbose had we used traditional methods.
+// fruits.indexOf('dates');
+// fruits.indexOf('oranges');
+// fruits.indexOf('pears');
+// indexOf('dates') returns -1, indexOf('oranges') returns 2, and indexOf('pears') returns 1 (the first index at which each element exists).
 
-// We have defined a function spreadOut that returns the variable sentence. Modify the function using the spread operator so that it returns the array ['learning', 'to', 'code', 'is', 'fun'].
+// indexOf() can be incredibly useful for quickly checking for the presence of an element on an array. We have defined a function, quickCheck, that takes an array and an element as arguments. Modify the function using indexOf() so that it returns true if the passed element exists on the array, and false if it does not.
 
-function spreadOut() {
-  let fragment = ["to", "code"];
-  let sentence = ["learning", ...fragment, "is", "fun"];
-  return sentence;
+function quickCheck(arr, elem) {
+  // Only change code below this line
+  if (arr.indexOf(elem) >= 0) {
+    return true;
+  }
+  return false;
 }
 
-console.log(spreadOut());
+console.log(quickCheck(["squash", "onions", "shallots"], "mushrooms"));
