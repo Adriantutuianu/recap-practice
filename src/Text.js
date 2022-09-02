@@ -1,41 +1,34 @@
-// At their most basic, objects are just collections of key-value pairs. In other words, they are pieces of data (values) mapped to unique identifiers called properties (keys). Take a look at an example:
+// Now let's take a look at a slightly more complex object. Object properties can be nested to an arbitrary depth, and their values can be any type of data supported by JavaScript, including arrays and even other objects. Consider the following:
 
-// const tekkenCharacter = {
-//   player: 'Hwoarang',
-//   fightingStyle: 'Tae Kwon Doe',
-//   human: true
+// let nestedObject = {
+//   id: 28802695164,
+//   date: 'December 31, 2016',
+//   data: {
+//     totalUsers: 99,
+//     online: 80,
+//     onlineStatus: {
+//       active: 67,
+//       away: 13,
+//       busy: 8
+//     }
+//   }
 // };
-// The above code defines a Tekken video game character object called tekkenCharacter. It has three properties, each of which map to a specific value. If you want to add an additional property, such as "origin", it can be done by assigning origin to the object:
+// nestedObject has three properties: id (value is a number), date (value is a string), and data (value is an object with its nested structure). While structures can quickly become complex, we can still use the same notations to access the information we need. To assign the value 10 to the busy property of the nested onlineStatus object, we use dot notation to reference the property:
 
-// tekkenCharacter.origin = 'South Korea';
-// This uses dot notation. If you were to observe the tekkenCharacter object, it will now include the origin property. Hwoarang also had distinct orange hair. You can add this property with bracket notation by doing:
+// nestedObject.data.onlineStatus.busy = 10;
+// Here we've defined an object userActivity, which includes another object nested within it. Set the value of the online key to 45.
 
-// tekkenCharacter['hair color'] = 'dyed orange';
-// Bracket notation is required if your property has a space in it or if you want to use a variable to name the property. In the above case, the property is enclosed in quotes to denote it as a string and will be added exactly as shown. Without quotes, it will be evaluated as a variable and the name of the property will be whatever value the variable is. Here's an example with a variable:
-
-// const eyes = 'eye color';
-
-// tekkenCharacter[eyes] = 'brown';
-// After adding all the examples, the object will look like this:
-
-// {
-//   player: 'Hwoarang',
-//   fightingStyle: 'Tae Kwon Doe',
-//   human: true,
-//   origin: 'South Korea',
-//   'hair color': 'dyed orange',
-//   'eye color': 'brown'
-// };
-// A foods object has been created with three entries. Using the syntax of your choice, add three more entries to it: bananas with a value of 13, grapes with a value of 35, and strawberries with a value of 27.
-
-let foods = {
-  apples: 25,
-  oranges: 32,
-  plums: 28,
+let userActivity = {
+  id: 23894201352,
+  date: "January 1, 2017",
+  data: {
+    totalUsers: 51,
+    online: 42,
+  },
 };
 
 // Only change code below this line
-(foods.bananas = 13), (foods.grapes = 35), (foods.strawberries = 27);
+userActivity.data.online = 45;
 // Only change code above this line
 
-console.log(foods);
+console.log(userActivity);
