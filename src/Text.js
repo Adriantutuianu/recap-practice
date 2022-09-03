@@ -1,18 +1,20 @@
-// Greet Friends!
-// The greetFriend function will take a string of a name, and should return a string greeting them as in the examples below.
+// Odd or Even?
+// Write a function that takes a single integer and returns a string of "odd" if it is an odd number, or "even" if it is even.
 
-// Examples:
+// Example:
 
-// greetFriend("Douglas");
-// // returns 'Hello Douglas!'
+// oddOrEven(1);
+// // returns "odd"
 
-// greetFriend("Maddie");
-// // returns 'Hello Maddie!'
+// oddOrEven(2);
+// // returns "even"
+// Note that in many other programming languages, "integer" is a data type. JavaScript only has the Number type, which includes both integers and decimals. For the purpose of this exercise, integer means "whole number"
 
-// greetFriend("Poonam");
-// // returns 'Hello Poonam!'
-
-function greetFriend(name) {
+function oddOrEven(num) {
   // Your code goes here...
-  return `Hello ${name}!`;
+  if (num % 2 == 0) {
+    return "even";
+  } else {
+    return "odd";
+  }
 }
