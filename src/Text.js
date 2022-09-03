@@ -1,20 +1,21 @@
-// Odd or Even?
-// Write a function that takes a single integer and returns a string of "odd" if it is an odd number, or "even" if it is even.
+// Is This a Palindrome?
+// Write a function that takes a string, and returns true if it is a palindrome, and false if it is not.
 
-// Example:
+// (A palindrome is a word that, when reversed, is exactly the same. e.g. "madam" or "racecar")
 
-// oddOrEven(1);
-// // returns "odd"
+// Examples:
 
-// oddOrEven(2);
-// // returns "even"
-// Note that in many other programming languages, "integer" is a data type. JavaScript only has the Number type, which includes both integers and decimals. For the purpose of this exercise, integer means "whole number"
+// isThisAPalindrome('yay');
+// // returns true
 
-function oddOrEven(num) {
+// isThisAPalindrome('no');
+// // returns false
+
+function isThisAPalindrome(str1) {
   // Your code goes here...
-  if (num % 2 == 0) {
-    return "even";
+  if (str1 == str1.split("").reverse().join("")) {
+    return true;
   } else {
-    return "odd";
+    return false;
   }
 }
