@@ -1,13 +1,18 @@
-// Add Two Numbers
-// Write a function that takes two numbers and returns the sum of those numbers.
+// Greet Friends!
+// The greetFriend function will take a string of a name, and should return a string greeting them as in the examples below.
 
-// Example:
+// Examples:
 
-// add(2, 2)
-// // returns 4
+// greetFriend("Douglas");
+// // returns 'Hello Douglas!'
 
-function add(a, b) {
+// greetFriend("Maddie");
+// // returns 'Hello Maddie!'
+
+// greetFriend("Poonam");
+// // returns 'Hello Poonam!'
+
+function greetFriend(name) {
   // Your code goes here...
-  const sum = a + b;
-  return sum;
+  return `Hello ${name}!`;
 }
