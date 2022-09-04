@@ -1,21 +1,19 @@
-// Is This a Palindrome?
-// Write a function that takes a string, and returns true if it is a palindrome, and false if it is not.
+// Is this Prime?
+// Write a function that takes a single positive integer as its argument. If the number is prime, it should return true. Otherwise, it should return false.
 
-// (A palindrome is a word that, when reversed, is exactly the same. e.g. "madam" or "racecar")
+// (A prime number is a number that is divisible only by itself and 1 - for example 2, 3, 5, 7, 11. The number 1 is not a prime.)
 
-// Examples:
+// Example:
 
-// isThisAPalindrome('yay');
+// checkIsPrime(2)
 // // returns true
 
-// isThisAPalindrome('no');
+// checkIsPrime(4)
 // // returns false
 
-function isThisAPalindrome(str1) {
+function checkIsPrime(num) {
   // Your code goes here...
-  if (str1 == str1.split("").reverse().join("")) {
-    return true;
-  } else {
-    return false;
-  }
+  for (let i = 2, s = Math.sqrt(num); i <= s; i++)
+    if (num % i === 0) return false;
+  return num > 1;
 }
