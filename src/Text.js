@@ -1,25 +1,27 @@
-// Hello, Northcoders Party Planner!
-// Northcoders want to have a party, and have enlisted the use of your savvy coding skills to help them!
+// Retrieve Password
+// Write a function that takes a user object, which represents a user of the Northcoders website, and returns the value of the password key from that object.
 
-// Uh oh - you're ready to send out your invitations when you spot some typos...
+// If the user object does not contain a password key, the function should instead return undefined.
 
-// Some of the names from your database don't have capital letters, so you need to make sure you capitalise the first letter of all of the guests names.
+// A typical user object might look like this:
 
-// Your greetGuests function will take a string of a first name and should return a string of a greeting with the capitalised name, as shown in the example below.
-
+// { name: 'Lucy', password: 'n0rthc0derzzz' }
 // Examples:
 
-// greetGuests("Douglas");
-// // returns 'Hello Douglas!'
+// retrievePassword({ name: 'Lucy', password: 'n0rthc0derzzz' })
+// // returns 'n0rthc0derzzz'
 
-// greetGuests("maddie");
-// // returns 'Hello Maddie!'
+// retrievePassword({ name: 'Sam', password: 'hi!' })
+// // returns 'hi!'
 
-// greetGuests("poonam");
-// // returns 'Hello Poonam!
+// retrievePassword({ name: 'Halima', favouriteFood: 'pizza' })
+// // returns undefined
 
-function greetGuests(name) {
-  const capitalized = name.charAt(0).toUpperCase() + name.slice(1);
-  return `Hello ${capitalized}!`;
+function retrievePassword(user) {
+  // Your code goes here...
+  if (!user.password) {
+    return undefined;
+  } else {
+    return user.password;
+  }
 }
-greetGuests("Douglas");
