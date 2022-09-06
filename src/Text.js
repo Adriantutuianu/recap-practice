@@ -1,22 +1,31 @@
-// Retrieve Key
-// Write a function that takes an object, and a string of the name of a key on that object. It should return the value of that key.
+// Find the First Odd Number
+// Complete the function findFirstOdd, so that it takes an array of numbers and returns the first odd number.
 
-// If the key doesn't exist on the object, it should return undefined
+// If there are no odd numbers, the function should return undefined.
 
 // Examples:
 
-// retrieveKey({name: 'Sam'}, 'name')
-// // returns 'Sam'
-// retrieveKey({password: 'Chips!'}, 'password')
-// // returns 'Chips!'
-// retrieveKey({name: 'Sam'}, 'age')
+// findFirstOdd([1,4,5])
+// // returns 1
+
+// findFirstOdd([2,4,5])
+// // returns 5
+
+// findFirstOdd([2,4,6])
 // // returns undefined
 
-function retrieveKey(object, key) {
+function findFirstOdd(numbers) {
   // Your code goes here...
-  if (!object[key]) {
+  const odds = [];
+  numbers.forEach((a) => {
+    if (a % 2 !== 0) {
+      odds.push(a);
+    }
+  });
+
+  if (!odds.length) {
     return undefined;
   } else {
-    return object[key];
+    return odds[0];
   }
 }
