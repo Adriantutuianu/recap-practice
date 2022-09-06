@@ -1,27 +1,22 @@
-// Retrieve Password
-// Write a function that takes a user object, which represents a user of the Northcoders website, and returns the value of the password key from that object.
+// Retrieve Key
+// Write a function that takes an object, and a string of the name of a key on that object. It should return the value of that key.
 
-// If the user object does not contain a password key, the function should instead return undefined.
+// If the key doesn't exist on the object, it should return undefined
 
-// A typical user object might look like this:
-
-// { name: 'Lucy', password: 'n0rthc0derzzz' }
 // Examples:
 
-// retrievePassword({ name: 'Lucy', password: 'n0rthc0derzzz' })
-// // returns 'n0rthc0derzzz'
-
-// retrievePassword({ name: 'Sam', password: 'hi!' })
-// // returns 'hi!'
-
-// retrievePassword({ name: 'Halima', favouriteFood: 'pizza' })
+// retrieveKey({name: 'Sam'}, 'name')
+// // returns 'Sam'
+// retrieveKey({password: 'Chips!'}, 'password')
+// // returns 'Chips!'
+// retrieveKey({name: 'Sam'}, 'age')
 // // returns undefined
 
-function retrievePassword(user) {
+function retrieveKey(object, key) {
   // Your code goes here...
-  if (!user.password) {
+  if (!object[key]) {
     return undefined;
   } else {
-    return user.password;
+    return object[key];
   }
 }
