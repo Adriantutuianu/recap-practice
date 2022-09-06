@@ -1,19 +1,25 @@
-// Is this Prime?
-// Write a function that takes a single positive integer as its argument. If the number is prime, it should return true. Otherwise, it should return false.
+// Hello, Northcoders Party Planner!
+// Northcoders want to have a party, and have enlisted the use of your savvy coding skills to help them!
 
-// (A prime number is a number that is divisible only by itself and 1 - for example 2, 3, 5, 7, 11. The number 1 is not a prime.)
+// Uh oh - you're ready to send out your invitations when you spot some typos...
 
-// Example:
+// Some of the names from your database don't have capital letters, so you need to make sure you capitalise the first letter of all of the guests names.
 
-// checkIsPrime(2)
-// // returns true
+// Your greetGuests function will take a string of a first name and should return a string of a greeting with the capitalised name, as shown in the example below.
 
-// checkIsPrime(4)
-// // returns false
+// Examples:
 
-function checkIsPrime(num) {
-  // Your code goes here...
-  for (let i = 2, s = Math.sqrt(num); i <= s; i++)
-    if (num % i === 0) return false;
-  return num > 1;
+// greetGuests("Douglas");
+// // returns 'Hello Douglas!'
+
+// greetGuests("maddie");
+// // returns 'Hello Maddie!'
+
+// greetGuests("poonam");
+// // returns 'Hello Poonam!
+
+function greetGuests(name) {
+  const capitalized = name.charAt(0).toUpperCase() + name.slice(1);
+  return `Hello ${capitalized}!`;
 }
+greetGuests("Douglas");
