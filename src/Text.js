@@ -1,31 +1,24 @@
-// Find the First Odd Number
-// Complete the function findFirstOdd, so that it takes an array of numbers and returns the first odd number.
+// Find Biggest and Smallest
+// Write a function that takes an array of numbers and returns the biggest and smallest in an object.
 
-// If there are no odd numbers, the function should return undefined.
+// Example:
 
-// Examples:
+// findBiggestAndSmallest([1, 2, 99, 100])
 
-// findFirstOdd([1,4,5])
-// // returns 1
+// // returns {biggest: 100, smallest: 1}
+// If there is only one number in the array, that will be both the biggest and the smallest.
 
-// findFirstOdd([2,4,5])
-// // returns 5
+// If there are no numbers in the array, it should return an empty object.
 
-// findFirstOdd([2,4,6])
-// // returns undefined
-
-function findFirstOdd(numbers) {
+function findBiggestAndSmallest(numbers) {
   // Your code goes here...
-  const odds = [];
-  numbers.forEach((a) => {
-    if (a % 2 !== 0) {
-      odds.push(a);
-    }
-  });
-
-  if (!odds.length) {
-    return undefined;
+  const biggestNumber = Math.max(...numbers);
+  const smallestNumber = Math.min(...numbers);
+  if (numbers.length === 1) {
+    return { biggest: numbers[0], smallest: numbers[0] };
+  } else if (!numbers.length) {
+    return {};
   } else {
-    return odds[0];
+    return { biggest: biggestNumber, smallest: smallestNumber };
   }
 }
