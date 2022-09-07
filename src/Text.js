@@ -1,24 +1,32 @@
-// Find Biggest and Smallest
-// Write a function that takes an array of numbers and returns the biggest and smallest in an object.
+// Find Even Length Strings
+// This function will take an array of values, and should return an array of all the even length strings.
 
-// Example:
+// Anything that's not a string, or not a string of even length, should not be returned in the array.
 
-// findBiggestAndSmallest([1, 2, 99, 100])
+// If there are no even length strings, it should return an empty array.
 
-// // returns {biggest: 100, smallest: 1}
-// If there is only one number in the array, that will be both the biggest and the smallest.
+// Examples:
 
-// If there are no numbers in the array, it should return an empty object.
+// findEvenLengthStrings(['hi', 'bye'])
+// // returns ['hi']
 
-function findBiggestAndSmallest(numbers) {
+// findEvenLengthStrings(['bye'])
+// // returns []
+
+function findEvenLengthStrings(items) {
   // Your code goes here...
-  const biggestNumber = Math.max(...numbers);
-  const smallestNumber = Math.min(...numbers);
-  if (numbers.length === 1) {
-    return { biggest: numbers[0], smallest: numbers[0] };
-  } else if (!numbers.length) {
-    return {};
+  const even = [];
+
+  items.forEach((item) => {
+    if (item !== null && !Array.isArray(item) && item.length % 2 == 0) {
+      even.push(item);
+    }
+  });
+
+  console.log(even);
+  if (!even.length) {
+    return [];
   } else {
-    return { biggest: biggestNumber, smallest: smallestNumber };
+    return even;
   }
 }
