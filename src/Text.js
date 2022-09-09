@@ -1,33 +1,29 @@
-// Making the Guest List
-// We need to keep track of the party guests, but the data we currently have combines the guests first and last names into a single name. You have been asked to separate the names to make the data easier to work with.
+// Tracking the Ticket Prices
+// You have been asked to update the guest list with the amounts that each guest is willing to pay for a ticket. Unfortunately, all of the ticket prices found in email messages have been sent to you as strings!
 
-// The makeGuestList function takes an object with a name property whose value will be a string consisting of a first name and a last name, separated by a space. The function should return an object.
+// The function trackAttendees takes an attendee object and a string representing how much they are willing to pay.
 
-// The function should remove the name property, replace it with firstName and lastName properties, as shown in the examples below.
+// It should return a modified attendee object, with an added property key of paidForTicket and value of the amount the attendee is willing to pay.
 
 // Examples:
 
-// makeGuestList({ name: "Hannah Fry", age: 46 })
-// // should return { firstName: "Hannah", lastName: "Fry", age: 46 }
+// trackAttendees({ firstName: "Veronica", lastName: "Green", age: 46 }, '25');
+// // should return { firstName: "Veronica", lastName: "Green", age: 46, paidForTicket: 25 }
 
-// makeGuestList({ name: "Paul Erdős", age: 46 })
-// // should return { firstName: "Paul", lastName: "Erdős", age: 46 }
+// trackAttendees({ firstName: "Anna", lastName: "Lytical", age: 27 }, '0');
+// // should return { firstName: "Anna", lastName: "Lytical", age: 27, paidForTicket: 0 }
+
+// trackAttendees({ firstName: "Ella", lastName: "Vaday", age: 30 }, '13');
+// // should return { firstName: "Ella", lastName: "Vaday", age: 30, paidForTicket: 13 }
 // Note: all other properties should remain unchanged.
 
-function makeGuestList(person) {
+function trackAttendees(person, ticketCost) {
   // Your code goes here...
-  const name = person.name;
+  //use spread operator to copy all object properties
+  const newPerson = { ...person };
 
-  const first = name.substring(0, name.indexOf(" "));
-  const second = name.substring(name.indexOf(" ") + 1);
-
-  //create a new object with all values without name
-  const newPerson = {
-    ...person,
-  };
-  delete newPerson.name;
-  newPerson.firstName = first;
-  newPerson.lastName = second;
+  // attached paidForTicket property to newPerson object
+  newPerson.paidForTicket = Number(ticketCost);
 
   return newPerson;
 }
