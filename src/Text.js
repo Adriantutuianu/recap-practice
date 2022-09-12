@@ -1,29 +1,63 @@
-// Tracking the Ticket Prices
-// You have been asked to update the guest list with the amounts that each guest is willing to pay for a ticket. Unfortunately, all of the ticket prices found in email messages have been sent to you as strings!
+// Can We Have the Party?
+// It's time to see if we can host our party!
 
-// The function trackAttendees takes an attendee object and a string representing how much they are willing to pay.
+// Before the party is confirmed, the shareholders need two criteria to be met:
 
-// It should return a modified attendee object, with an added property key of paidForTicket and value of the amount the attendee is willing to pay.
+// At least 5 people must be in attendance
+// At least £100 must be generated via pay-what-you-want ticket sales
+// The isPartyViable function will be called with an array of guest objects. Each of those objects has a paidForTicket property with a number representing how much they are willing to pay for their ticket.
+
+// It should return a boolean value of false if not enough people are attending or attendees don't spend enough money on tickets, and true if enough people are attending and they spend enough money on tickets.
 
 // Examples:
 
-// trackAttendees({ firstName: "Veronica", lastName: "Green", age: 46 }, '25');
-// // should return { firstName: "Veronica", lastName: "Green", age: 46, paidForTicket: 25 }
+// const guests = [
+//   { name: "diya", paidForTicket: 15 },
+//   { name: "amul", paidForTicket: 2 },
+//   { name: "saleh", paidForTicket: 2 },
+//   { name: "philippa", paidForTicket: 30 },
+// ]
+// isPartyViable(guests);
+// // should return false
 
-// trackAttendees({ firstName: "Anna", lastName: "Lytical", age: 27 }, '0');
-// // should return { firstName: "Anna", lastName: "Lytical", age: 27, paidForTicket: 0 }
+// const guests = [
+//   { name: "diya", paidForTicket: 15 },
+//   { name: "amul", paidForTicket: 2 },
+//   { name: "saleh", paidForTicket: 2 },
+//   { name: "philippa", paidForTicket: 30 },
+//   { name: "kev", paidForTicket: 6 },
+//   { name: "sarah", paidForTicket: 11 },
+// ]
+// isPartyViable(guests);
+// // should return false
 
-// trackAttendees({ firstName: "Ella", lastName: "Vaday", age: 30 }, '13');
-// // should return { firstName: "Ella", lastName: "Vaday", age: 30, paidForTicket: 13 }
-// Note: all other properties should remain unchanged.
+// const guests = [
+//   { name: "diya", paidForTicket: 15 },
+//   { name: "amul", paidForTicket: 20 },
+//   { name: "saleh", paidForTicket: 2 },
+//   { name: "philippa", paidForTicket: 30 },
+//   { name: "kev", paidForTicket: 26 },
+//   { name: "sarah", paidForTicket: 11 },
+// ]
+// isPartyViable(guests);
+// // should return true
 
-function trackAttendees(person, ticketCost) {
+function isPartyViable(guests) {
   // Your code goes here...
-  //use spread operator to copy all object properties
-  const newPerson = { ...person };
 
-  // attached paidForTicket property to newPerson object
-  newPerson.paidForTicket = Number(ticketCost);
+  // find out attendance - at least 5
+  const attendance = guests.length;
 
-  return newPerson;
+  // amount generated via pay-what-you-want- at least £100
+  const allPaid = [];
+  guests.forEach((item) => allPaid.push(item.paidForTicket));
+
+  // sum all paid array
+  const sum = allPaid.reduce((a, b) => a + b, 0);
+
+  if (attendance >= 5 && sum >= 100) {
+    return true;
+  } else {
+    return false;
+  }
 }
