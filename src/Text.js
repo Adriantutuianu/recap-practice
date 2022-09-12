@@ -1,63 +1,23 @@
-// Can We Have the Party?
-// It's time to see if we can host our party!
+// Ordering Supplies
+// Hooray! The party has been given the go-ahead! Now it's time to write a function which will help us to order some supplies for the party.
 
-// Before the party is confirmed, the shareholders need two criteria to be met:
+// Northevents Events Supplies™️ sell a range of goods which can help us to throw an amazing party!
 
-// At least 5 people must be in attendance
-// At least £100 must be generated via pay-what-you-want ticket sales
-// The isPartyViable function will be called with an array of guest objects. Each of those objects has a paidForTicket property with a number representing how much they are willing to pay for their ticket.
+// The orderSupplies function takes two arguments: a supplies object with keys of party supplies and values of the cost of that supply, and the number of guests attending.
 
-// It should return a boolean value of false if not enough people are attending or attendees don't spend enough money on tickets, and true if enough people are attending and they spend enough money on tickets.
+// It should return a number showing the total cost of ordering one of each item per guest!
 
-// Examples:
+// orderSupplies({cake: 2, iceCream: 7}, 2)
+// // should return 18
 
-// const guests = [
-//   { name: "diya", paidForTicket: 15 },
-//   { name: "amul", paidForTicket: 2 },
-//   { name: "saleh", paidForTicket: 2 },
-//   { name: "philippa", paidForTicket: 30 },
-// ]
-// isPartyViable(guests);
-// // should return false
+// orderSupplies({plates: 2, cups: 1, forks: 1, partyHats: 4}, 20)
+// // should return 160
 
-// const guests = [
-//   { name: "diya", paidForTicket: 15 },
-//   { name: "amul", paidForTicket: 2 },
-//   { name: "saleh", paidForTicket: 2 },
-//   { name: "philippa", paidForTicket: 30 },
-//   { name: "kev", paidForTicket: 6 },
-//   { name: "sarah", paidForTicket: 11 },
-// ]
-// isPartyViable(guests);
-// // should return false
-
-// const guests = [
-//   { name: "diya", paidForTicket: 15 },
-//   { name: "amul", paidForTicket: 20 },
-//   { name: "saleh", paidForTicket: 2 },
-//   { name: "philippa", paidForTicket: 30 },
-//   { name: "kev", paidForTicket: 26 },
-//   { name: "sarah", paidForTicket: 11 },
-// ]
-// isPartyViable(guests);
-// // should return true
-
-function isPartyViable(guests) {
+function orderSupplies(supplies, guests) {
   // Your code goes here...
 
-  // find out attendance - at least 5
-  const attendance = guests.length;
+  // number showing the total cost of ordering one of each item per guest.
+  const totalCost = Object.values(supplies).reduce((a, b) => a + b, 0) * guests;
 
-  // amount generated via pay-what-you-want- at least £100
-  const allPaid = [];
-  guests.forEach((item) => allPaid.push(item.paidForTicket));
-
-  // sum all paid array
-  const sum = allPaid.reduce((a, b) => a + b, 0);
-
-  if (attendance >= 5 && sum >= 100) {
-    return true;
-  } else {
-    return false;
-  }
+  return totalCost;
 }
