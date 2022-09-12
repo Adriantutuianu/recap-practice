@@ -1,32 +1,37 @@
-// How Many Tables?
-// Hooray! The party can go ahead, the guest list is finalised, and it's almost time to make the seating plan. But first, you need to figure out how many tables we need!
+// Taxi Fare Calculator
+// Northdrivers Taxi Company™️ have asked for your help writing a function which will calculate the cost of getting to the party! Journeys are priced as follows:
 
-// The number of guests may not divide evenly by the number of seats, so we will have to add some extra chairs to a few of the tables for them.
+// Journeys up to 3 minutes long have a flat base rate cost of £5
+// Every minute after the first 3 will cost an extra 70p
+// The length of the journey is always rounded up to a whole number of minutes
+// The calculateTaxiFare function should take a number representing the length of a taxi journey in seconds, and return a number representing the cost of that journey in pence.
 
-// The function calculateTables takes two arguments, the number of guests and the number of seats around a table.
+// calculateTaxiFare(150);
+// // should return 500
 
-// It should return an object with two properties: a key of tables with the value of the number tables, and a key of remainingGuests with a value of the number of guests without a seat who will need to be added to one of the other tables.
+// calculateTaxiFare(360);
+// // should return 710
 
-// Examples Below.
+// calculateTaxiFare(491);
+// // should return 920
 
-// calculateTables(4, 2);
-// // should return { tables:2 , remainingGuests: 0}
-
-// calculateTables(14, 6);
-// // should return { tables:2 , remainingGuests: 2}
-
-// calculateTables(26, 5);
-// // should return { tables:5 , remainingGuests: 1}
-
-function calculateTables(guests, seats) {
+function calculateTaxiFare(seconds) {
   // Your code goes here...
 
-  // Calculate the number of tables needed
-  const neededTables = Math.floor(guests / seats);
-  console.log(neededTables);
-  // Calculate remaining guests
-  const remainingGuests = guests % seats;
-  console.log(remainingGuests);
+  let cost = 0;
+  let flatBase = 500;
 
-  return { tables: neededTables, remainingGuests: remainingGuests };
+  // Calculate the cost of journey- pence
+  if (seconds <= 180) {
+    cost = flatBase;
+  } else {
+    // Convert seconds to minutes
+    const minutes = Math.ceil(seconds / 60);
+    console.log(minutes);
+    const taxableMinutes = minutes - 3;
+    const totalMinutes = taxableMinutes * 70;
+    console.log(totalMinutes);
+    cost = flatBase + totalMinutes;
+  }
+  return cost;
 }
