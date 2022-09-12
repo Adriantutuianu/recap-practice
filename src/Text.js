@@ -1,23 +1,32 @@
-// Ordering Supplies
-// Hooray! The party has been given the go-ahead! Now it's time to write a function which will help us to order some supplies for the party.
+// How Many Tables?
+// Hooray! The party can go ahead, the guest list is finalised, and it's almost time to make the seating plan. But first, you need to figure out how many tables we need!
 
-// Northevents Events Supplies™️ sell a range of goods which can help us to throw an amazing party!
+// The number of guests may not divide evenly by the number of seats, so we will have to add some extra chairs to a few of the tables for them.
 
-// The orderSupplies function takes two arguments: a supplies object with keys of party supplies and values of the cost of that supply, and the number of guests attending.
+// The function calculateTables takes two arguments, the number of guests and the number of seats around a table.
 
-// It should return a number showing the total cost of ordering one of each item per guest!
+// It should return an object with two properties: a key of tables with the value of the number tables, and a key of remainingGuests with a value of the number of guests without a seat who will need to be added to one of the other tables.
 
-// orderSupplies({cake: 2, iceCream: 7}, 2)
-// // should return 18
+// Examples Below.
 
-// orderSupplies({plates: 2, cups: 1, forks: 1, partyHats: 4}, 20)
-// // should return 160
+// calculateTables(4, 2);
+// // should return { tables:2 , remainingGuests: 0}
 
-function orderSupplies(supplies, guests) {
+// calculateTables(14, 6);
+// // should return { tables:2 , remainingGuests: 2}
+
+// calculateTables(26, 5);
+// // should return { tables:5 , remainingGuests: 1}
+
+function calculateTables(guests, seats) {
   // Your code goes here...
 
-  // number showing the total cost of ordering one of each item per guest.
-  const totalCost = Object.values(supplies).reduce((a, b) => a + b, 0) * guests;
+  // Calculate the number of tables needed
+  const neededTables = Math.floor(guests / seats);
+  console.log(neededTables);
+  // Calculate remaining guests
+  const remainingGuests = guests % seats;
+  console.log(remainingGuests);
 
-  return totalCost;
+  return { tables: neededTables, remainingGuests: remainingGuests };
 }
