@@ -1,37 +1,29 @@
-// Taxi Fare Calculator
-// Northdrivers Taxi Company™️ have asked for your help writing a function which will calculate the cost of getting to the party! Journeys are priced as follows:
+// Who are the Winners?
+// The Northcoders party is nearly over & it's time to select the winners of the prize draw raffle!
 
-// Journeys up to 3 minutes long have a flat base rate cost of £5
-// Every minute after the first 3 will cost an extra 70p
-// The length of the journey is always rounded up to a whole number of minutes
-// The calculateTaxiFare function should take a number representing the length of a taxi journey in seconds, and return a number representing the cost of that journey in pence.
+// You have been asked to write a function which will select the winners based on two factors: how much they paid, and their seat number. If both of these numbers are odd, the attendee wins a prize!
 
-// calculateTaxiFare(150);
-// // should return 500
+// The pickWinners function will be passed an array of numbers representing ticket costs as its only argument. The index position represents the seat number.
 
-// calculateTaxiFare(360);
-// // should return 710
+// Your task is to return an array of objects. Each object should contain two keys. The first key is seat with a value of the odd index. The second key is ticketCost with a value of the ticket price at that index in the input array.
 
-// calculateTaxiFare(491);
-// // should return 920
+// Examples below.
 
-function calculateTaxiFare(seconds) {
+// pickWinners([6, 7, 12, 49])
+// // should return [{seat: 1, ticketCost: 7}, {seat: 3, ticketCost: 49}]
+// pickWinners([1, 3, 5, 7, 9, 11])
+// // should return [{seat: 1, ticketCost: 3}, {seat: 3, ticketCost: 7}, {seat: 5, ticketCost: 11} ]
+// pickWinners([1, 6, 13, 8, 29, 50])
+// // should return []
+
+function pickWinners(numbers) {
   // Your code goes here...
+  const numbersObject = [];
 
-  let cost = 0;
-  let flatBase = 500;
-
-  // Calculate the cost of journey- pence
-  if (seconds <= 180) {
-    cost = flatBase;
-  } else {
-    // Convert seconds to minutes
-    const minutes = Math.ceil(seconds / 60);
-    console.log(minutes);
-    const taxableMinutes = minutes - 3;
-    const totalMinutes = taxableMinutes * 70;
-    console.log(totalMinutes);
-    cost = flatBase + totalMinutes;
-  }
-  return cost;
+  numbers.map((item, index) => {
+    if (item % 2 && index % 2) {
+      numbersObject.push({ seat: index, ticketCost: item });
+    }
+  });
+  return numbersObject;
 }
