@@ -37,5 +37,5 @@ function gatherFeedback(feedbackArray) {
     }
   });
 
-  return { positive: positive, negative: negative, neutral: neutral };
+  return { positive, negative, neutral };
 }
